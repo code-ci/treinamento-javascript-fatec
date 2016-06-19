@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Herança</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Herança</h1>
+				</section>
+
+				<section>
+					<h1>Objeto</h1>
+
+					<p>Um objeto é uma <span class="fragment highlight-red">coleção
+						de propriedades</span> e uma propriedade é uma
+						<span class="fragment highlight-red">associação entre chave
+						e valor</span>. Uma propriedade pode ser uma
+						<span class="fragment highlight-red">função</span>, e nesse caso,
+						a propriedade é conhecida como <span class="fragment highlight-red">método</span>.
+						Em JavaScript, a <span class="fragment highlight-red">herança
+						é feita através de protótipos</span>, e um protótipo pode
+						ser um objeto ou null.</p>
+				</section>
+
+				<section>
+					<p>Objetos <span class="fragment highlight-red">herdam</span>
+						de outros objetos</p>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var joao = {
+	nome: 'João',
+	idade: 20,
+	sexo: 'masculino'
+};
+
+var pedro = {
+	nome: 'Pedro',
+	idade: 18,
+	sexo: 'masculino'
+};
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-01.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+var joao = {
+	nome: 'João',
+	idade: 20,
+	<mark class="fragment fade-out" data-fragment-index="1">sexo: 'masculino'</mark>
+};
+
+var pedro = {
+	nome: 'Pedro',
+	idade: 18,
+	<mark class="fragment fade-out" data-fragment-index="1">sexo: 'masculino'</mark>
+};
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+<span class="fragment fade-in">
+var homem = {
+	sexo: 'masculino'
+};
+</span>
+
+var joao = {
+	nome: 'João',
+	idade: 20
+};
+
+var pedro = {
+	nome: 'Pedro',
+	idade: 18
+};
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-02.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<p>A propriedade <span class="fragment highlight-red">__proto__</span>
+						é uma referência para o protótipo do objeto.</p>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+var homem = {
+	sexo: 'masculino'
+};
+
+var joao = {
+	nome: 'João',
+	idade: 20,
+	<span class="fragment fade-in" data-fragment-index="1">__proto__: homem</span>
+};
+
+var pedro = {
+	nome: 'Pedro',
+	idade: 18,
+	<span class="fragment fade-in" data-fragment-index="1">__proto__: homem</span>
+};
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-03.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<h2>Atenção</h2>
+
+					<p><span class="fragment highlight-red">__proto__</span> não
+						é padrão e pode não funcionar em alguns interpretadores</p>
+				</section>
+
+				<section>
+					Prefira a utilização de <span class="fragment highlight-red" data-fragment-index="1">
+						Object.getPrototypeOf</span> e <span class="fragment highlight-red" data-fragment-index="1">
+						Object.setPrototypeOf</span> para interagir com o protótipo
+						do objeto.
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+var homem = {
+	sexo: 'masculino'
+};
+
+var joao = {
+	nome: 'João',
+	idade: 20,
+	<span class="fragment fade-out" data-fragment-index="1">__proto__: homem</span>
+};
+
+<span class="fragment fade-in" data-fragment-index="2">Object.setPrototypeOf(joao, homem);</span>
+					</code></pre>
+				</section>
+
+				<section>
+					<p>Também é possível utilizar
+						<span class="fragment highlight-red">Object.create</span>
+						para determinar o protótipo do objeto.</p>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+var homem = {
+	sexo: 'masculino'
+};
+
+var joao = Object.create(homem);
+joao.nome = 'João';
+joao.idade = 20;
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-04.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<h1>Shadowing</h1>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+joao.sexo; //masculino
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-04.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+joao.sexo; //masculino
+joao.sexo = 'feminino';
+<span class="fragment fade-in">joao.sexo; //feminino</span>
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-05.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+joao.sexo; //masculino
+joao.sexo = 'feminino';
+joao.sexo; //feminino
+delete joao.sexo;
+<span class="fragment fade-in">joao.sexo; //masculino</span>
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-04.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<h1>Funções Fábrica</h1>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var joao = {
+	nome: 'João',
+	idade: 20,
+	sexo: 'masculino'
+};
+
+var pedro = {
+	nome: 'Pedro',
+	idade: 18,
+	sexo: 'masculino'
+};
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var criarHomem = function(nome, idade) {
+	return {
+		nome: nome,
+		idade: idade,
+		sexo: 'masculino'
+	}
+}
+
+var joao = criarHomem('João', 20);
+var pedro = criarHomem('Pedro', 18);
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Funções Construtoras</h1>
+				</section>
+
+				<section>
+					<p>O operador <span class="fragment highlight-red">new</span>
+						cria um novo objeto por meio de uma função construtora.<p>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var Homem = function(nome, idade) {
+	this.nome = nome;
+	this.idade = idade;
+	this.sexo = 'masculino';
+}
+
+var joao = new Homem('João', 20);
+var pedro = new Homem('Pedro', 18);
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-06.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<p>Qual é a diferença entre <span class="fragment highlight-red" data-fragment-index="1">
+						[[Prototype]]</span> e <span class="fragment highlight-red" data-fragment-index="1">prototype
+						</span>?</p>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var Homem = function(nome, idade) {
+	this.nome = nome;
+	this.idade = idade;
+	this.sexo = 'masculino';
+}
+
+var joao = new Homem('João', 20);
+var pedro = new Homem('Pedro', 18);
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+var Homem = function(nome, idade) {
+	this.nome = nome;
+	this.idade = idade;
+	<mark class="fragment fade-out" data-fragment-index="1">this.sexo = 'masculino';</mark>
+}
+
+<span class="fragment fade-in">Homem.prototype.sexo = masculino</span>
+
+var joao = new Homem('João', 20);
+var pedro = new Homem('Pedro', 18);
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-07.png" data-background-size="auto 90%"></section>
+
+				<section>
+					<p>Por dentro do <span class="fragment highlight-red">new</span></p>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim data-noescape>
+var _new = function(f) {
+	var objeto = {};
+	if (f.prototype !== null) {
+		objeto.__proto__ = f.prototype;
+	}
+	var novoObjeto = f.apply(objeto,
+			Array.prototype.slice.call(arguments, 1));
+	if ((typeof novoObjeto === "object" ||
+			typeof novoObjeto === "function") &&
+				novoObjeto !== null) {
+		return novoObjeto;
+	}
+	return objeto;
+}
+					</code></pre>
+				</section>
+
+				<section data-background="img/heranca-08.png" data-background-size="auto 90%"></section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'zoom',
+				maxScale: 2,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
