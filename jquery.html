@@ -1,0 +1,77 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Introdução ao jQuery</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>jQuery</h1>
+          <h3>Write less, do more</h3>
+        </section>
+
+        <section>
+          <h1>O que é?</h1>
+
+          <p>
+            jQuery é uma biblioteca JavaScript multi browser, desenvolvida para
+            simplificar a forma como interagimos com o Document Object Model (DOM),
+            como tratamos eventos e como realizamos a comunicação entre o client e o servidor.
+          </p>
+        </section>
+
+        <section>
+          <h1>jQuery nos ajuda a:</h1>
+
+          <ul>
+            <li class="fragment fade-in">Encontrar elementos em um documento HTML</li>
+            <li class="fragment fade-in">Alterar o conteúdo de um documento HTML</li>
+            <li class="fragment fade-in">Identificar o que o usuário faz e agir de acordo</li>
+            <li class="fragment fade-in">Animar o conteúdo em uma página</li>
+            <li class="fragment fade-in">Comunicar através da rede para buscar mais conteúdo</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'zoom',
+				maxScale: 2,
+        controls: false,
+        keyboard: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+  </body>
+</html>
