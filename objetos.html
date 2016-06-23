@@ -218,6 +218,85 @@
                 </pre>
               </section>
           </section>
+
+          <section>
+            Associação
+            <section>
+              <p style="margin-top:50px;">Composição</p>
+              <pre>
+                <code>
+                  function Roda(aro, tala) {
+                    this.aro = aro;
+                    this.tala = tala;
+
+                    this.rodar = function() {
+                      console.log("Rodando...");
+                    };
+                  }
+
+                  var carro = {
+                    marca: "ford",
+                    roda: new Roda(17, 7)
+                  }
+
+                  console.log(carro.roda.aro);
+                  carro.roda.rodar();
+                </code>
+              </pre>
+            </section>
+            <section>
+              <p style="margin-top:50px;">Agregação</p>
+              <pre>
+                <code>
+                  function Pessoa(nome, idade) {
+                    this.nome = nome;
+                    this.idade = idade;
+
+                    this.trabalhar = function() {
+                      console.log("Trabalhando...");
+                    };
+                  }
+
+                  var funcionario = {
+                    informacaoPessoal: new Pessoa("João", 20),
+                    cargo: "Desenvolvedor"
+                  }
+
+                  console.log(funcionario.informacaoPessoal.nome);
+                  funcionario.informacaoPessoal.trabalhar();
+                </code>
+              </pre>
+            </section>
+          </section>
+
+          <section>
+            Delete (The Last Samurai!!!)
+            <section>
+              <pre>
+                <code>
+                  function Pessoa(nome, idade) {
+                    this.nome = nome;
+                    this.idade = idade;
+
+                    this.trabalhar = function() {
+                      console.log("Trabalhando...");
+                    };
+                  }
+
+                  var funcionario = {
+                    informacaoPessoal: new Pessoa("João", 20),
+                    cargo: "Desenvolvedor"
+                  }
+
+                  delete funcionario.cargo;
+                  console.log(funcionario);
+
+                  delete funcionario.informacaoPessoal;
+                  console.log(funcionario);
+                </code>
+            </section>
+          </section>
+
         </section>
       </div>
   </div>
