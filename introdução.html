@@ -29,61 +29,115 @@
 				</section>
 
 				<section>
-					<h1>História</h1>
+					<h2>História</h2>
 
-					<p>Desenvolvido por <span class="fragment highlight-red">Brendan Eich</span>
+					<p>Desenvolvido por <span style="color: #ff2c2d">Brendan Eich</span>
 					 com o nome de Mocha enquanto trabalhava na Netscape</p>
 
 					<p>Lançado em setembro de 1995 na versão beta do navegador Netscape 2.0 com o nome de
-					 <span class="fragment highlight-red">LiveScript</span> e ainda na versão beta</p>
+					 <span style="color: #ff2c2d">LiveScript</span> e ainda na versão beta</p>
 
-					<p>Logo em dezembro seu novo nome passou a ser <span class="fragment highlight-red">JavaScript</span>
+					<p>Logo em dezembro seu novo nome passou a ser <span style="color: #ff2c2d">JavaScript</span>
 					 em parceria com a Sun Microsystems</p>
 				</section>
 
 				<section>
-					<p>Em 1998 é lançado o <span class="fragment highlight-red">ECMAScript</span>
+					<p>Em 1998 é lançado o <span style="color: #ff2c2d">ECMAScript</span>
 					 que é o nome oficial do JavaScript</p>
 
-					<p><span class="fragment highlight-red">JScript</span>
+					<p><span style="color: #ff2c2d">JScript</span>
 					 desenvolvido pela Microsoft por não poder usar o
 					 JavaScript</p>
 				</section>
 
 				<section>
-					<h1>Baseado em outras 4 linguagens</h1>
+					<h2>Baseado em outras 4 linguagens</h2>
 
-					<p class="fragment fade-down">Java: sintaxa, convenções</p>
+					<p class="fragment highlight-red">Java: sintaxe, convenções</p>
 
-					<p class="fragment fade-down">Scheme: lambda, tipagem fraca</p>
+					<p class="fragment highlight-red">Scheme: lambda, tipagem fraca</p>
 
-					<p class="fragment fade-down">Self: herança baseadas em protótipos, objedos dinâmicos</p>
+					<p class="fragment highlight-red">Self: herança baseadas em protótipos, objetos dinâmicos</p>
 
-					<p class="fragment fade-down">Perl: expressões regulares</p>
+					<p class="fragment highlight-red">Perl: expressões regulares</p>
 				</section>
 
 				<section>
-					<h1>características</h1>
+					<h2>características</h2>
 
-					<p class="fragment fade-down">A linguagem JavaScript é interpretada</p>
+					<p class="fragment highlight-red">A linguagem JavaScript é interpretada</p>
 
-					<p class="fragment fade-down">Orientação a Objetos baseada em protótipos</p>
+					<p class="fragment highlight-red">Orientação a Objetos baseada em protótipos</p>
 
-					<p class="fragment fade-down">Tipagem Fraca e Dinâmica</p>
+					<p class="fragment highlight-red">Tipagem Fraca e Dinâmica</p>
 
-					<p class="fragment fade-down">Não possui suporte a programação multi-thread</p>
+					<p class="fragment highlight-red">Não possui suporte a programação multi-thread</p>
 				</section>
 
 				<section>
-					<h1>Tipo de Dados</h1>
+					<h2>Tipo de Dados</h2>
 				</section>
 
 				<section>
-					<h1>Number</h1>
+					<h2>Number</h2>
+
+					<p>Números em JavaScript só tem um tipo que é Number   :D</p>
+
+					<a href="#" class="fragment fade-up">
+							<img src="true-story.png" alt="Smiley face" height="300" width="400">
+					</a>
+
+					<p class="fragment fade-up">Em outras linguagens temos <span style="color: #ff2c2d">bit, short, int, long, float, double</span>.
+					 O motivo era o uso racional de memória, por exemplo em sistemas embarcados.</p>
+
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Number API</h2>
+					<pre><code class="hljs" data-trim>
+var numero = 15;
+
+numero.isFinite(); // resultado
+numero.isInteger(); // resultado
+numero.isNaN; // resultado
+numero.isSafeInteger(); // resultado
+numero.toExponential(10); // resultado
+numero.toFixed(2); // resultado
+numero.toPrecision(2); // resultado
+numero.toString(); // resultado
+numero.valueOf(); // resultado
+					</code></pre>
 				</section>
 
 				<section>
 					<h1>String</h1>
+
+					<p> <span style="color: #ff2c2d">'</span> e  <span style="color: #ff2c2d">"</span> se referem a Strings</p>
+					<p>São imutáveis</p>
+				</section>
+
+				<section>
+					<h2>String API</h2>
+					<pre><code class="hljs" data-trim>
+var nome = "Thiago";
+
+nome.charAt(2); \\ resultado
+nome.charCodeAt(2); \\ resultado
+nome.concat(" Tersariol"); \\ resultado
+nome.endsWith("o"); \\ resultado
+nome.indexOf('o'); \\ resultado
+nome.lasIndexOf("o"); \\ resultado
+nome.match(??); \\ resultado
+nome.slice(??); \\ resultado
+nome.split(??); \\ resultado
+nome.substr(??); \\ resultado
+nome.substring(??); \\ resultado
+nome.toLowerCase(); \\ resultado
+nome.toUpperCase(); \\ resultado
+nome.trim(); \\ resultado
+nome.valueOf(??); \\ resultado
+					</code></pre>
 				</section>
 
 				<section>
@@ -91,11 +145,11 @@
 				</section>
 
 				<section>
-					<h1>Condicionais</h1>
+					<h1>Comparadores Lógicos</h1>
 				</section>
 
 				<section>
-					<h1>Operadores Lógicos</h1>
+					<h1>Condicionais</h1>
 				</section>
 
 				<section>
