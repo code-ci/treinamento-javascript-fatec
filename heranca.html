@@ -241,8 +241,8 @@ var criarHomem = function(nome, idade) {
 		nome: nome,
 		idade: idade,
 		sexo: 'masculino'
-	}
-}
+	};
+};
 
 var joao = criarHomem('João', 20);
 var pedro = criarHomem('Pedro', 18);
@@ -264,7 +264,7 @@ var Homem = function(nome, idade) {
 	this.nome = nome;
 	this.idade = idade;
 	this.sexo = 'masculino';
-}
+};
 
 var joao = new Homem('João', 20);
 var pedro = new Homem('Pedro', 18);
@@ -285,7 +285,7 @@ var Homem = function(nome, idade) {
 	this.nome = nome;
 	this.idade = idade;
 	this.sexo = 'masculino';
-}
+};
 
 var joao = new Homem('João', 20);
 var pedro = new Homem('Pedro', 18);
@@ -298,9 +298,9 @@ var Homem = function(nome, idade) {
 	this.nome = nome;
 	this.idade = idade;
 	<mark class="fragment fade-out" data-fragment-index="1">this.sexo = 'masculino';</mark>
-}
+};
 
-<span class="fragment fade-in">Homem.prototype.sexo = masculino</span>
+<span class="fragment fade-in">Homem.prototype.sexo = 'masculino';</span>
 
 var joao = new Homem('João', 20);
 var pedro = new Homem('Pedro', 18);
@@ -328,7 +328,7 @@ var _new = function(f) {
 		return novoObjeto;
 	}
 	return objeto;
-}
+};
 					</code></pre>
 				</section>
 
