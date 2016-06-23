@@ -138,6 +138,86 @@
               </pre>
             </section>
           </section>
+
+          <section>
+              Métodos
+              <section>
+                <p style="margin-top:50px;">Primitivos</p>
+                <pre>
+                  <code>
+                    var text = "CleanCode";
+
+                    text.substring(5);
+                  </code>
+                </pre>
+                <pre>
+                  <code>
+                    var text = "Clean";
+
+                    text.concat("Code");
+                  </code>
+                </pre>
+              </section>
+
+              <section>
+                <p>Seus Métodos</p>
+                <pre>
+                  <code>
+                    var objPessoa = {};
+
+                    objPessoa.andar = function() {
+                      console.log("Estou andando...");
+                    };
+
+                    objPessoa.andar();
+                  </code>
+                </pre>
+              </section>
+              <section>
+                <p style="margin-top:50px;">DRY (Don't repeat yourself)</p>
+                <pre>
+                  <code>
+                    function Pessoa(nome, idade) {
+                      this.nome = nome;
+                      this.idade = idade;
+
+                      this.print = function() {
+                        console.log("Nome: " + this.nome);
+                        console.log("Idade: " + this.idade);
+                      };
+                    }
+
+                    var joao = new Pessoa("João", 20);
+                    joao.print();
+
+                    var jose = new Pessoa("José", 25);
+                    jose.print();
+                  </code>
+                </pre>
+              </section>
+
+              <section>
+                <p style="margin-top:50px;">Ou ainda...</p>
+                <pre>
+                  <code>
+                    function print() {
+                      console.log("Nome: " + this.nome);
+                      console.log("Idade: " + this.idade);
+                    }
+
+                    function Pessoa(nome, idade) {
+                      this.nome = nome;
+                      this.idade = idade;
+
+                      this.print = print;
+                    }
+
+                    var joao = new Pessoa("João", 20);
+                    joao.print();
+                  </code>
+                </pre>
+              </section>
+          </section>
         </section>
       </div>
   </div>
