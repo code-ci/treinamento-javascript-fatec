@@ -122,26 +122,32 @@ numero.valueOf(); // resultado
 					<pre><code class="hljs" data-trim>
 var nome = "Thiago";
 
-nome.charAt(2); \\ resultado
-nome.charCodeAt(2); \\ resultado
-nome.concat(" Tersariol"); \\ resultado
-nome.endsWith("o"); \\ resultado
-nome.indexOf('o'); \\ resultado
-nome.lasIndexOf("o"); \\ resultado
-nome.match(??); \\ resultado
-nome.slice(??); \\ resultado
-nome.split(??); \\ resultado
-nome.substr(??); \\ resultado
-nome.substring(??); \\ resultado
-nome.toLowerCase(); \\ resultado
-nome.toUpperCase(); \\ resultado
-nome.trim(); \\ resultado
-nome.valueOf(??); \\ resultado
+nome.charAt(2); \\ 'i'
+nome.charCodeAt(2); \\ 105
+nome.concat(" Tersariol"); \\ 'Thiago Tersariol'
+nome.endsWith("o"); \\ true
+nome.indexOf('o'); \\ 5
+nome.lasIndexOf("o"); \\ 5
+nome.match('ia'); \\ [ 'ia', index: 2, input: 'thiago' ]
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+nome.split('i'); \\ [ 'Th', 'ago']
+nome.startsWith('t'); \\ false
+nome.substring(1, 2); \\ 'hi'
+nome.toLowerCase(); \\ 'thiago'
+nome.toUpperCase(); \\ 'THIAGO'
+nome.trim(); \\ 'thiago'
 					</code></pre>
 				</section>
 
 				<section>
 					<h1>Boolean</h1>
+					<br>
+					<p>true</p>
+					<p>false</p>
 				</section>
 
 				<section>
