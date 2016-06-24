@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introdução</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>JavaScript</h1>
+				</section>
+
+				<section>
+					<h2>História</h2>
+
+					<p>Desenvolvido por <span style="color: #ff2c2d">Brendan Eich</span>
+					 com o nome de Mocha enquanto trabalhava na Netscape</p>
+
+					<p>Lançado em setembro de 1995 na versão beta do navegador Netscape 2.0 com o nome de
+					 <span style="color: #ff2c2d">LiveScript</span> e ainda na versão beta</p>
+
+					<p>Logo em dezembro seu novo nome passou a ser <span style="color: #ff2c2d">JavaScript</span>
+					 em parceria com a Sun Microsystems</p>
+				</section>
+
+				<section>
+					<p>Em 1998 é lançado o <span style="color: #ff2c2d">ECMAScript</span>
+					 que é o nome oficial do JavaScript</p>
+
+					<p><span style="color: #ff2c2d">JScript</span>
+					 desenvolvido pela Microsoft por não poder usar o
+					 JavaScript</p>
+				</section>
+
+				<section>
+					<h2>Baseado em outras 4 linguagens</h2>
+
+					<p class="fragment highlight-red">Java: sintaxe, convenções</p>
+
+					<p class="fragment highlight-red">Scheme: lambda, tipagem fraca</p>
+
+					<p class="fragment highlight-red">Self: herança baseadas em protótipos, objetos dinâmicos</p>
+
+					<p class="fragment highlight-red">Perl: expressões regulares</p>
+				</section>
+
+				<section>
+					<h2>características</h2>
+
+					<p class="fragment highlight-red">A linguagem JavaScript é interpretada</p>
+
+					<p class="fragment highlight-red">Orientação a Objetos baseada em protótipos</p>
+
+					<p class="fragment highlight-red">Tipagem Fraca e Dinâmica</p>
+
+					<p class="fragment highlight-red">Não possui suporte a programação multi-thread</p>
+				</section>
+
+				<section>
+					<h2>Tipo de Dados</h2>
+				</section>
+
+				<section>
+					<h2>Number</h2>
+
+					<p>Números em JavaScript só tem um tipo que é Number   :D</p>
+
+					<a href="#" class="fragment fade-up">
+							<img src="true-story.png" alt="Smiley face" height="300" width="400">
+					</a>
+
+					<p class="fragment fade-up">Em outras linguagens temos <span style="color: #ff2c2d">bit, short, int, long, float, double</span>.
+					 O motivo era o uso racional de memória, por exemplo em sistemas embarcados.</p>
+
+					<p></p>
+				</section>
+
+				<section>
+					<h2>Number API</h2>
+					<pre><code class="hljs" data-trim>
+var numero = 15;
+
+numero.isFinite(); // resultado
+numero.isInteger(); // resultado
+numero.isNaN; // resultado
+numero.isSafeInteger(); // resultado
+numero.toExponential(10); // resultado
+numero.toFixed(2); // resultado
+numero.toPrecision(2); // resultado
+numero.toString(); // resultado
+numero.valueOf(); // resultado
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>String</h1>
+
+					<p> <span style="color: #ff2c2d">'</span> e  <span style="color: #ff2c2d">"</span> se referem a Strings</p>
+					<p>São imutáveis</p>
+				</section>
+
+				<section>
+					<h2>String API</h2>
+					<pre><code class="hljs" data-trim>
+var nome = "Thiago";
+
+nome.charAt(2); \\ resultado
+nome.charCodeAt(2); \\ resultado
+nome.concat(" Tersariol"); \\ resultado
+nome.endsWith("o"); \\ resultado
+nome.indexOf('o'); \\ resultado
+nome.lasIndexOf("o"); \\ resultado
+nome.match(??); \\ resultado
+nome.slice(??); \\ resultado
+nome.split(??); \\ resultado
+nome.substr(??); \\ resultado
+nome.substring(??); \\ resultado
+nome.toLowerCase(); \\ resultado
+nome.toUpperCase(); \\ resultado
+nome.trim(); \\ resultado
+nome.valueOf(??); \\ resultado
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Boolean</h1>
+				</section>
+
+				<section>
+					<h1>Comparadores Lógicos</h1>
+				</section>
+
+				<section>
+					<h1>Condicionais</h1>
+				</section>
+
+				<section>
+					<h1>Laços de Repetição</h1>
+				</section>
+
+				<section>
+					<h1>Funções</h1>
+				</section>
+
+				<section>
+					<h1>DOM</h1>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'zoom',
+				maxScale: 2,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
