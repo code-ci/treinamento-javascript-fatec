@@ -113,8 +113,8 @@ numero.valueOf(); // resultado
 				<section>
 					<h1>String</h1>
 
-					<p> <span style="color: #ff2c2d">'</span> e  <span style="color: #ff2c2d">"</span> se referem a Strings</p>
-					<p>São imutáveis</p>
+					<!-- <p> <span style="color: #ff2c2d">'</span> e  <span style="color: #ff2c2d">"</span> se referem a Strings</p>
+					<p>São imutáveis</p> -->
 				</section>
 
 				<section>
@@ -151,7 +151,86 @@ nome.trim(); \\ 'thiago'
 				</section>
 
 				<section>
-					<h1>Comparadores Lógicos</h1>
+					<h1>Date</h1>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var data = new Date();
+
+data.getDate()
+data.getDay()
+data.getFullYear()
+data.getHours()
+data.getMilliseconds()
+data.getMinutes()
+data.getMonth()
+data.getSeconds()
+data.getTime()
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var data = new Date();
+
+data.setDate()
+data.setFullYear()
+data.setHours()
+data.setMilliseconds()
+data.setMinutes()
+data.setMonth()
+data.setSeconds()
+data.setTime()
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Comparadores</h1>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var x = "5"
+
+// ==
+x == 5; //true
+x == "5"; //true
+
+// ===
+x === 5; //false
+x ==="5"; //true
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var x = "5"
+
+// !=
+x != 5; //false
+x != "5"; //false
+
+// !==
+x !== 5; //true
+x !=="5"; //false
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var x = 5
+
+// >
+// >=
+x > 5;
+x >= 5;
+
+// <
+// <=
+x < 5;
+x <= 5;
+					</code></pre>
 				</section>
 
 				<section>
@@ -159,9 +238,75 @@ nome.trim(); \\ 'thiago'
 				</section>
 
 				<section>
+					<pre><code class="hljs" data-trim>
+if (time < 10) {
+    greeting = "Good morning";
+} else if (time < 20) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+switch (new Date().getDay()) {
+    case 6:
+        text = "Today is Saturday";
+        break; 
+    case 0:
+        text = "Today is Sunday";
+        break; 
+    default: 
+        text = "Looking forward to the Weekend";
+}
+					</code></pre>
+				</section>
+
+				<section>
 					<h1>Laços de Repetição</h1>
 				</section>
 
+				<section>
+					<pre><code class="hljs" data-trim>
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var person = {fname:"John", lname:"Doe", age:25}; 
+
+var text = "";
+var x;
+for (x in person) {
+    text += person[x];
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+while (i < 10) {
+    text += "The number is " + i;
+    i++;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+do {
+    text += "The number is " + i;
+    i++;
+}
+while (i < 10);
+					</code></pre>
+				</section>
+				
 				<section>
 					<h1>Funções</h1>
 				</section>
