@@ -88,7 +88,7 @@
 					<p>Números em JavaScript só tem um tipo que é Number   :D</p>
 
 					<a href="#" class="fragment fade-up">
-							<img src="true-story.png" alt="Smiley face" height="300" width="400">
+							<img src="img/intro-03.png" alt="Smiley face" height="300" width="400">
 					</a>
 
 					<p class="fragment fade-up">Em outras linguagens temos <span style="color: #ff2c2d">bit, short, int, long, float, double</span>.
@@ -102,15 +102,10 @@
 					<pre><code class="hljs" data-trim>
 var numero = 15;
 
-numero.isFinite(); // resultado
-numero.isInteger(); // resultado
-numero.isNaN; // resultado
-numero.isSafeInteger(); // resultado
-numero.toExponential(10); // resultado
-numero.toFixed(2); // resultado
-numero.toPrecision(2); // resultado
-numero.toString(); // resultado
-numero.valueOf(); // resultado
+numero.toExponential(2); // '1.0e+1'
+numero.toFixed(2); // '15.00'
+numero.toPrecision(5); // '15.000'
+numero.toString(); // '15'
 					</code></pre>
 				</section>
 
@@ -150,8 +145,8 @@ nome.trim(); \\ 'thiago'
 				<section>
 					<h2>Boolean</h2>
 					<br>
-					<p>true</p>
-					<p>false</p>
+					<p><span style="color: #ff2c2d">true </span></p>
+					<p><span style="color: #ff2c2d">false</span></p>
 				</section>
 
 				<section>
@@ -243,27 +238,31 @@ x <= 5;
 
 				<section>
 					<pre><code class="hljs" data-trim>
-if (time < 10) {
-    greeting = "Good morning";
-} else if (time < 20) {
-    greeting = "Good day";
+var mensagem = "";
+
+if (time < 12) {
+    mensagem = "Bom dia";
+} else if (time < 18) {
+    mensagem = "Boa tarde";
 } else {
-    greeting = "Good evening";
+    mensagem = "Boa noite";
 }
 					</code></pre>
 				</section>
 
 				<section>
 					<pre><code class="hljs" data-trim>
+var mensagem = "";
+
 switch (new Date().getDay()) {
     case 6:
-        text = "Today is Saturday";
+        mensagem = "Sábado";
         break; 
     case 0:
-        text = "Today is Sunday";
+        mensagem = "Domingo";
         break; 
     default: 
-        text = "Looking forward to the Weekend";
+        mensagem = "??";
 }
 					</code></pre>
 				</section>
@@ -274,28 +273,32 @@ switch (new Date().getDay()) {
 
 				<section>
 					<pre><code class="hljs" data-trim>
+var mensagem = "";
+
 for (i = 0; i < 5; i++) {
-    text += "The number is " + i + "<br>";
+    mensagem += "Número: " + i + "<br>";
 }
 					</code></pre>
 				</section>
 
 				<section>
 					<pre><code class="hljs" data-trim>
-var person = {fname:"John", lname:"Doe", age:25}; 
+var pessoa = {Nome:"John", Sobrenome:"Doe", idade:25}; 
 
-var text = "";
+var mensagem = "";
 var x;
-for (x in person) {
-    text += person[x];
+for (x in pessoa) {
+    mensagem += pessoa[x];
 }
 					</code></pre>
 				</section>
 
 				<section>
 					<pre><code class="hljs" data-trim>
+var mensagem = "";
+
 while (i < 10) {
-    text += "The number is " + i;
+    mensagem += "Número: " + i;
     i++;
 }
 					</code></pre>
@@ -303,8 +306,10 @@ while (i < 10) {
 
 				<section>
 					<pre><code class="hljs" data-trim>
+var mensagem = "";
+
 do {
-    text += "The number is " + i;
+    mensagem += "Número: " + i;
     i++;
 }
 while (i < 10);
@@ -313,6 +318,26 @@ while (i < 10);
 
 				<section>
 					<h2>Funções</h2>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+function soma(a, b) {
+	return a + b;
+}
+
+console.log(soma(2, 2));
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var soma = function(a, b) {
+	return a + b;
+}
+
+console.log(soma(2, 2));
+					</code></pre>
 				</section>
 
 				<section>
@@ -327,7 +352,6 @@ while (i < 10);
 
 					<p>Todos os itens do DOM são nodes (nós)</p>
 
-					<p></p>
 				</section>
 
 				<section data-background="img/intro-00.png" data-background-size="auto 90%"></section>
@@ -335,7 +359,55 @@ while (i < 10);
 				<section data-background="img/intro-01.png" data-background-size="auto 90%"></section>
 
 				<section>
-					
+					<h2>Exercícios!</h2>
+
+					<a href="#" class="fragment fade-up">
+						<img src="img/intro-02.gif" alt="Smiley face" height="300" width="400">
+					</a>
+				</section>
+
+				<section>
+					<p>Criar uma variável, atribuir a ela a mensagem "Hello world!", exibir no console;</p>
+
+					<pre><code class="hljs fragment fade-up" data-trim>
+var mensagem = "";
+
+mensagem = "Hello wordl!";
+
+console.log(mensagem);
+					</code></pre>
+				</section>
+
+				<section>
+					<p>Calcular a média aritmética de dois valores</p>
+
+					<pre><code class="hljs fragment fade-up" data-trim>
+var a = 2;
+var b = 2;
+
+var resultado = (a + b)/2;
+console.log(resultado);
+
+					</code></pre>
+				</section>
+
+				<section>
+					<p>Utilizando if/else, exiba o status da media de um aluno, onde: </p>
+					<p>nota <= 4 é Reprovado</p>
+					<p>nota < 7 e > 4 é Exame</p>
+					<p>nota > 7 é Aprovado</p>
+
+					<pre><code class="hljs fragment fade-up" data-trim>
+var nota = 6.9
+
+if (nota <= 4) {
+	console.log("Reprovado");
+} else if (nota < 7) {
+	console.log("Exame");
+} else {
+	console.log("Aprovado");
+}
+					</code></pre>
 				</section>
 				
 			</div>
