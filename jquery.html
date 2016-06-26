@@ -1,0 +1,323 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Introdução ao jQuery</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>jQuery</h1>
+          <br>
+          <h3>Write less, do more</h3>
+        </section>
+
+        <section>
+          <h2>O que é jQuery?</h2>
+          <ul>
+              <li class="fragment fade-in">É uma biblioteca JavaScript.</li>
+              <li class="fragment fade-in">Facilita de forma considerável o desenvolvimento.</li>
+              <li class="fragment fade-in">jQuery é simples de aprender!</li>
+          </ul>
+          <br>
+          <br>
+          <p class="fragment fade-in">
+            O propósito do jQuery é tornar bem mais simples o uso de JavaScript no seu site.
+          </p>
+        </section>
+
+        <section>
+          <h2>jQuery...</h2>
+          <p>
+            jQuery reúne várias tarefas comuns, que geralmente necessitam de várias linhas de código,
+            em métodos que podem ser chamados em apenas uma linha.
+          </p>
+        </section>
+
+        <section>
+          <h2>Recursos</h2>
+          </br>
+          <ul>
+            <li class="fragment fade-in">Manipulação de elementos em um documento HTML.</li>
+            <li class="fragment fade-in">Manipulação de CSS.</li>
+            <li class="fragment fade-in">Manipulação de eventos HTML.</li>
+            <li class="fragment fade-in">Efeitos e animações.</li>
+            <li class="fragment fade-in">AJAX.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Usando jQuery!</h2>
+          <p>
+            Existem duas formas de adicionar o jQuery ao seu projeto.
+          </p>
+          <br>
+          <ul>
+            <li class="fragment fade-in">Fazendo o download a biblioteca no site jquery.com</li>
+            <li class="fragment fade-in">Incluindo o jQuery através de um CDN, como Google</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Download</h2>
+          <p>
+            Existem duas versões disponíveis para download.
+          </p>
+          <br>
+          <ul>
+            <li class="fragment fade-in">Production version. (Simplificada e comprimida)</li>
+            <li class="fragment fade-in">Development version. (Código legível)</li>
+          </ul>
+          <br>
+        </section>
+
+        <section>
+          <h2>Download</h2>
+          <p>
+            jQuery é um único arquivo JavaScript, e você deve referência-lo com a tag
+            <span class="fragment highlight-red">script</span>.
+          </p>
+          <pre>
+            <code class="hljs" data-trim>
+                <script src="jquery-1.12.2.min.js"></script>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>(Content Delivery Network) CDN</h2>
+          <p>
+            Caso não queira fazer o download e hospedar o jQuery você mesmo,
+            você pode incluí-lo através de uma Content Delivery network.
+          </p>
+          <br>
+          <p class="fragment fade-in">
+            Tanto o Google quanto a Microsoft hospedam o jQuery.
+          </p>
+        </section>
+
+        <section>
+          <h2>(Content Delivery Network) CDN</h2>
+          <pre>
+            <h3>Google</h3>
+            <code class="hljs" data-trim>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            </code>
+          </pre>
+
+          <pre>
+            <h3>Microsoft</h3>
+            <code class="hljs" data-trim>
+              <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Sintaxe</h2>
+          <p>
+            A sintaxe do jQuery é feita para selecionar elementos e realizar ações sobre eles.
+          </p>
+          <br>
+          <p>
+            A sintaxe básica é:
+          </p>
+          <pre>
+            <code class="hljs" data-trim>
+              $(selector).action()
+            </code>
+          </pre>
+          <ul>
+            <li class="fragment fade-in">$ -> Define o jQuery</li>
+            <li class="fragment fade-in">selector -> Um seletor para encontrar elementos HTML</li>
+            <li class="fragment fade-in">action() -> A ação a ser executada</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Exemplos</h2>
+          <br>
+          <pre>
+            <code class="hljs" data-trim>
+              $(this).hide() // Esconde o elemento atual
+              </code>
+              <code class="hljs" data-trim>
+              $("p").hide() // Esconde todos os elementos p
+            </code>
+            <code class="hljs" data-trim>
+              $(".azul").hide() // Esconde todos os elementos com a classe "azul"
+            </code>
+            <code class="hljs" data-trim>
+              $("#idAzul").hide() // Esconde o elemento que possui o id "idAzul"
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Seletores</h2>
+          <br>
+          <p>
+          Seletores são utilizados para encontrar elementos HTML pelo seu nome,
+          id, classes, tipos, atributos, valores de atributos e muito mais.
+        </p>
+
+        </section>
+
+        <section>
+          <h2>Seletor de elemento</h2>
+          <br>
+          <p>
+            Seleciona todos os elementos da página de acordo com o nome do elemento.
+          </p>
+          <pre>
+            <code class="hljs" data-trim>
+              $("p")
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Seletor de #id</h2>
+          <br>
+          <p>
+            Utiliza o atributo id de uma tag HTML para encontrar um elemento específico.
+          </p>
+          <pre>
+            <code class="hljs" data-trim>
+              $("#id")
+            </code>
+          </pre>
+          <p>
+            Um id deve ser único em um documento HTML, então deve-se usar o seletor de #id,
+            quando se quer encontrar um único elemento.
+          </p>
+        </section>
+
+        <section>
+          <h2>Seletor de .classe</h2>
+          <br>
+          <p>
+            Utiliza o atributo class para encontrar todos os elementos da classe especificada.
+          </p>
+          <pre>
+            <code class="hljs" data-trim>
+              $(".class")
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Eventos</h2>
+          <p>
+            Todas as ações do usuário que uma página web pode responder.
+            <br/>
+            Um evento representa o exato momento em que algo acontece.
+          </p>
+          <p>
+            Exemplos:
+          </p>
+          <ul>
+            <li>Mover o mouse sobre um elemento.</li>
+            <li>Selecionar um checkbox.</li>
+            <li>Clixar em um elemento.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Eventos</h2>
+          <p>
+            A maior parte dos eventos do DOM possuem um equivalente em jQuery.
+          </p>
+        </section>
+        <section>
+          <h2>Eventos</h2>
+          <p>
+            Para atribuir um evento a todos os parágrafos em uma página.
+          </p>
+          <pre>
+            <code class="hljs" data-trim>
+              $("p").click();
+            </code>
+          </pre>
+          <p>
+            Em seguida, definimos o que deve acontecer quando o evento for disparado.
+            Precisamos passar uma function para o evento.
+          </p>
+          <pre>
+            <code class="hljs" data-trim>
+              $("p").click(function() {
+  // ação do evento.
+});
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>Evento Document Ready</h2>
+          <br>
+          <p>
+            Evento executado no momento em que a página termina de carregar.
+          </p>
+          <p>
+            <pre>
+              <code class="hljs" data-trim>
+                $(document).ready(function(){
+     // Métodos jQuery...
+});
+              </code>
+            </pre>
+          </p>
+          <p>
+            BOA PRÁTICA!!
+          </p>
+        </section>
+        <section>
+          <h2>Evento Document Ready</h2>
+          <br>
+          <p>
+            Colocar o JavaScript dentro do evento ready,
+            previne que o código seja executado antes da página estar pronta, o que poderia gerar erros.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'zoom',
+				maxScale: 2,
+        controls: false,
+        keyboard: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+  </body>
+</html>
