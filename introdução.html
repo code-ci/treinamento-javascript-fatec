@@ -28,6 +28,10 @@
 					<h1>JavaScript</h1>
 				</section>
 
+				<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+					<h1>JavaScript</h1>
+				</section>
+
 				<section>
 					<h2>História</h2>
 
@@ -111,10 +115,10 @@ numero.valueOf(); // resultado
 				</section>
 
 				<section>
-					<h1>String</h1>
+					<h2>String</h2>
 
-					<p> <span style="color: #ff2c2d">'</span> e  <span style="color: #ff2c2d">"</span> se referem a Strings</p>
-					<p>São imutáveis</p>
+					<!-- <p> <span style="color: #ff2c2d">'</span> e  <span style="color: #ff2c2d">"</span> se referem a Strings</p>
+					<p>São imutáveis</p> -->
 				</section>
 
 				<section>
@@ -122,46 +126,216 @@ numero.valueOf(); // resultado
 					<pre><code class="hljs" data-trim>
 var nome = "Thiago";
 
-nome.charAt(2); \\ resultado
-nome.charCodeAt(2); \\ resultado
-nome.concat(" Tersariol"); \\ resultado
-nome.endsWith("o"); \\ resultado
-nome.indexOf('o'); \\ resultado
-nome.lasIndexOf("o"); \\ resultado
-nome.match(??); \\ resultado
-nome.slice(??); \\ resultado
-nome.split(??); \\ resultado
-nome.substr(??); \\ resultado
-nome.substring(??); \\ resultado
-nome.toLowerCase(); \\ resultado
-nome.toUpperCase(); \\ resultado
-nome.trim(); \\ resultado
-nome.valueOf(??); \\ resultado
+nome.charAt(2); \\ 'i'
+nome.charCodeAt(2); \\ 105
+nome.concat(" Tersariol"); \\ 'Thiago Tersariol'
+nome.endsWith("o"); \\ true
+nome.indexOf('o'); \\ 5
+nome.lasIndexOf("o"); \\ 5
+nome.match('ia'); \\ [ 'ia', index: 2, input: 'thiago' ]
 					</code></pre>
 				</section>
 
 				<section>
-					<h1>Boolean</h1>
+					<pre><code class="hljs" data-trim>
+nome.split('i'); \\ [ 'Th', 'ago']
+nome.startsWith('t'); \\ false
+nome.substring(1, 2); \\ 'hi'
+nome.toLowerCase(); \\ 'thiago'
+nome.toUpperCase(); \\ 'THIAGO'
+nome.trim(); \\ 'thiago'
+					</code></pre>
 				</section>
 
 				<section>
-					<h1>Comparadores Lógicos</h1>
+					<h2>Boolean</h2>
+					<br>
+					<p>true</p>
+					<p>false</p>
 				</section>
 
 				<section>
-					<h1>Condicionais</h1>
+					<h2>Date</h2>
 				</section>
 
 				<section>
-					<h1>Laços de Repetição</h1>
+					<pre><code class="hljs" data-trim>
+var data = new Date();
+
+data.getDate()
+data.getDay()
+data.getFullYear()
+data.getHours()
+data.getMilliseconds()
+data.getMinutes()
+data.getMonth()
+data.getSeconds()
+data.getTime()
+					</code></pre>
 				</section>
 
 				<section>
-					<h1>Funções</h1>
+					<pre><code class="hljs" data-trim>
+var data = new Date();
+
+data.setDate()
+data.setFullYear()
+data.setHours()
+data.setMilliseconds()
+data.setMinutes()
+data.setMonth()
+data.setSeconds()
+data.setTime()
+					</code></pre>
 				</section>
 
 				<section>
-					<h1>DOM</h1>
+					<h2>Comparadores</h2>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var x = "5"
+
+// ==
+x == 5; //true
+x == "5"; //true
+
+// ===
+x === 5; //false
+x ==="5"; //true
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var x = "5"
+
+// !=
+x != 5; //false
+x != "5"; //false
+
+// !==
+x !== 5; //true
+x !=="5"; //false
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var x = 5
+
+// >
+// >=
+x > 5;
+x >= 5;
+
+// <
+// <=
+x < 5;
+x <= 5;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Condicionais</h2>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+if (time < 10) {
+    greeting = "Good morning";
+} else if (time < 20) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+switch (new Date().getDay()) {
+    case 6:
+        text = "Today is Saturday";
+        break; 
+    case 0:
+        text = "Today is Sunday";
+        break; 
+    default: 
+        text = "Looking forward to the Weekend";
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Laços de Repetição</h2>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+var person = {fname:"John", lname:"Doe", age:25}; 
+
+var text = "";
+var x;
+for (x in person) {
+    text += person[x];
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+while (i < 10) {
+    text += "The number is " + i;
+    i++;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="hljs" data-trim>
+do {
+    text += "The number is " + i;
+    i++;
+}
+while (i < 10);
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Funções</h2>
+				</section>
+
+				<section>
+					<h2>DOM</h2>
+					<br>
+					<h4>Document Object Model</h4>
+				</section>
+
+				<section>
+
+					<p>É um objeto hierárquico que contém todos os elementos presentes na página HTML</p>
+
+					<p>Todos os itens do DOM são nodes (nós)</p>
+
+					<p></p>
+				</section>
+
+				<section data-background="img/intro-00.png" data-background-size="auto 90%"></section>
+
+				<section data-background="img/intro-01.png" data-background-size="auto 90%"></section>
+
+				<section>
+					
 				</section>
 				
 			</div>

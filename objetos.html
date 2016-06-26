@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Objetos</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+          <section><h1>Objetos!!!</h1></section>
+
+          <section>
+            Introdução
+            <section>
+              <p>Objetos em programação são abstrações de objetos da vida real</p>
+            </section>
+            <section>
+              <p>Possui estado e comportamento</p>
+            </section>
+            <section>
+              <p>Tem como vantagem a simplicidade, reutilização e organização do código</p>
+            </section>
+            <section>
+              <p>Não existe classe em javascript mas podemos simular com funções e prototype</p>
+            </section>
+            <section>
+              <p>Em JavaScript, quase tudo é um objeto. Todos os tipos primitivos - com exceção de null e undefined - são tratados como objetos</p>
+            </section>
+            <section>
+              <p>Objetos são coleções de chaves e valores</p>
+            </section>
+          </section>
+
+          <section>
+            Criação
+            <section>
+              <p style="margin-top:50px;">Notação literal</p>
+              <pre>
+                <code>
+                  var objPessoa = {
+                    nome: "João",
+                    idade: 20
+                  }
+                </code>
+              </pre>
+              <pre>
+                <code>
+                  var objCarro = {
+                    marca: "Ford",
+                    modelo: "Focus",
+                    ano: 2016
+                  }
+                </code>
+              </pre>
+            </section>
+            <section>
+              <p style="margin-top:50px;">Função Construtora</p>
+              <pre>
+                <code>
+                  function Pessoa(nome, idade) {
+                    this.nome = nome;
+                    this.idade = idade;
+                  }
+
+                  var pessoa = new Pessoa("João", 20);
+                </code>
+              </pre>
+              <pre>
+                <code>
+                  function Carro(marca, modelo, ano) {
+                    this.marca = marca;
+                    this.modelo = modelo;
+                    this.ano = ano;
+                  }
+
+                  var meuCarro = new Carro("Ford", "Focus", 2016);
+                </code>
+              </pre>
+            </section>
+            <section>
+              <p style="margin-top:50px;">Função Construtora sem Parametros</p>
+              <pre>
+                <code>
+                  function Pessoa() {
+                  }
+
+                  var pessoa = new Pessoa();
+                  // OU
+                  // PODEMOS NESSE CASO OMITIR OS PARENTESES
+                  var pessoaX = new Pessoa;
+                </code>
+              </pre>
+            </section>
+            <section>
+              <p style="margin-top:50px;">Construtor Object</p>
+              <pre>
+                <code>
+                  var pessoa = new Object();
+                </code>
+              </pre>
+            </section>
+          </section>
+
+          <section>
+            JSON
+            <section>
+              <p style="margin-top:50px;">JavaScript Object Notation</p>
+              <pre>
+                <code>
+                  var text = '{"nome":"João", "idade":20}'
+
+                  var objPessoa = JSON.parse(text);
+                </code>
+              </pre>
+              <pre>
+                <code>
+                  var text = '{"nome":"João", "idade":20}'
+
+                  var objPessoa = eval("(" + text + ")");
+                </code>
+              </pre>
+            </section>
+          </section>
+
+          <section>
+              Métodos
+              <section>
+                <p style="margin-top:50px;">Primitivos</p>
+                <pre>
+                  <code>
+                    var text = "CleanCode";
+
+                    text.substring(5);
+                  </code>
+                </pre>
+                <pre>
+                  <code>
+                    var text = "Clean";
+
+                    text.concat("Code");
+                  </code>
+                </pre>
+              </section>
+
+              <section>
+                <p>Seus Métodos</p>
+                <pre>
+                  <code>
+                    var objPessoa = {};
+
+                    objPessoa.andar = function() {
+                      console.log("Estou andando...");
+                    };
+
+                    objPessoa.andar();
+                  </code>
+                </pre>
+              </section>
+              <section>
+                <p style="margin-top:50px;">DRY (Don't repeat yourself)</p>
+                <pre>
+                  <code>
+                    function Pessoa(nome, idade) {
+                      this.nome = nome;
+                      this.idade = idade;
+
+                      this.print = function() {
+                        console.log("Nome: " + this.nome);
+                        console.log("Idade: " + this.idade);
+                      };
+                    }
+
+                    var joao = new Pessoa("João", 20);
+                    joao.print();
+
+                    var jose = new Pessoa("José", 25);
+                    jose.print();
+                  </code>
+                </pre>
+              </section>
+
+              <section>
+                <p style="margin-top:50px;">Ou ainda...</p>
+                <pre>
+                  <code>
+                    function print() {
+                      console.log("Nome: " + this.nome);
+                      console.log("Idade: " + this.idade);
+                    }
+
+                    function Pessoa(nome, idade) {
+                      this.nome = nome;
+                      this.idade = idade;
+
+                      this.print = print;
+                    }
+
+                    var joao = new Pessoa("João", 20);
+                    joao.print();
+                  </code>
+                </pre>
+              </section>
+          </section>
+
+          <section>
+            Associação
+            <section>
+              <p style="margin-top:50px;">Composição</p>
+              <pre>
+                <code>
+                  function Roda(aro, tala) {
+                    this.aro = aro;
+                    this.tala = tala;
+
+                    this.rodar = function() {
+                      console.log("Rodando...");
+                    };
+                  }
+
+                  var carro = {
+                    marca: "ford",
+                    roda: new Roda(17, 7)
+                  }
+
+                  console.log(carro.roda.aro);
+                  carro.roda.rodar();
+                </code>
+              </pre>
+            </section>
+            <section>
+              <p style="margin-top:50px;">Agregação</p>
+              <pre>
+                <code>
+                  function Pessoa(nome, idade) {
+                    this.nome = nome;
+                    this.idade = idade;
+
+                    this.trabalhar = function() {
+                      console.log("Trabalhando...");
+                    };
+                  }
+
+                  var funcionario = {
+                    informacaoPessoal: new Pessoa("João", 20),
+                    cargo: "Desenvolvedor"
+                  }
+
+                  console.log(funcionario.informacaoPessoal.nome);
+                  funcionario.informacaoPessoal.trabalhar();
+                </code>
+              </pre>
+            </section>
+          </section>
+
+          <section>
+            Delete (The Last Samurai!!!)
+            <section>
+              <pre>
+                <code>
+                  function Pessoa(nome, idade) {
+                    this.nome = nome;
+                    this.idade = idade;
+
+                    this.trabalhar = function() {
+                      console.log("Trabalhando...");
+                    };
+                  }
+
+                  var funcionario = {
+                    informacaoPessoal: new Pessoa("João", 20),
+                    cargo: "Desenvolvedor"
+                  }
+
+                  delete funcionario.cargo;
+                  console.log(funcionario);
+
+                  delete funcionario.informacaoPessoal;
+                  console.log(funcionario);
+                </code>
+            </section>
+          </section>
+
+        </section>
+      </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      history: true,
+      transition: 'zoom',
+      maxScale: 2,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+  </body>
+</html>
