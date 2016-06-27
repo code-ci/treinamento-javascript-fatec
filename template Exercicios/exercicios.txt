@@ -1,5 +1,7 @@
-1. Exibir uma mensagem qualquer na tela a sua escolha, por exemplo: “Ola Mundo!”
+1. Hello world!
+
 2. Calcular a média aritmética entre 2 valores
+
 3. Calcular o tempo de vida em meses e dias de uma pessoa através da sua idade (em anos).
 
 Exemplo:
@@ -7,9 +9,7 @@ Idade: 10 anos
 	Tempo de vida em meses: 120 meses
 	Tempo de vida em dias: 3650 dias
 
-4. Calcular a área e o perímetro de um quadrado /  retângulo.
-	Perímetro (L + L + L + L)
-	Área: L x L
+4. Calcular a área de um quadrado. (Área: L x L)
  
 5. Converter de Graus Fahrenheit (f) para 
 Graus Celsius (c): 
@@ -23,8 +23,6 @@ C = distância (km) / litros (L)
 
 8. Construa um programa que receba o peso de uma pessoa em quilos e mostre esse peso em gramas
 
-9. Construa um programa que calcule e exiba a área de um losango
-	A = (diag_maior * diag_menor) / 2
 
 10. Realize a leitura de 2 numeros e realize as seguintes tarefas:
 	1. Identificar qual deles é maior
@@ -34,19 +32,12 @@ C = distância (km) / litros (L)
 	3. Calcular a diferença entre o maior número e o menor número (res = maior – menor)
 
 
-11. Incrementar o programa de média exibindo se o aluno foi aprovado ou reprovado seguindo os critérios abaixo:
-	Média >= 5	Aprovado
-	Média < 5	Reprovado
+29. Receba duas notas de um aluno e exiba a media e se está Aprovado, Reprovado ou Exame:
+	Média >= 7 		Aprovado
+	Média >= 4 e < 7	Exame
+	Média < 4 		Reprovado
 
-12. Incrementar o programa de conversão de temperaturas. O usuário deverá selecionar qual o tipo de conversão ele deseja realizar.
-	c= (5.0  * (f-32))/9
-	f = 9.0 / 5.0 * c + 32
-
-13. Refazer o programa para calculo da média, levando em consideração os seguintes critérios:
-	Média >= 7		Aprovado
-	4 <= Média < 7	Exame
-	Média < 4		Reprovado
-
+//NAO
 14. Resolver a equação do 2º. Grau ax2+bx+c=0
 	Verificar e calcular as raízes x1 e x2
 
@@ -66,7 +57,18 @@ C = distância (km) / litros (L)
 		35,0 <= IMC < 40,0	Obesidade Grau II
 		IMC >= 40,0		Obesidade Grau III
 
-16. Reescreva o programa de conversão de temperaturas utilizando switch.
+21. Imprimir na tela os números de 1 a 10.
+
+	Imprimir na tela os números de 10 a 1.
+
+22. Dado um determinado número escreva a tabuada do mesmo até o 10
+
+23. Recebe 2 números do usuário e exiba todos os números existentes entre eles.
+
+
+-----------
+
+
 
 17. Desenvolver um programa que simule uma 
 	calculadora com 4 operações (+, -, *, /). 
@@ -95,16 +97,6 @@ C = distância (km) / litros (L)
 	Juvenil A		11 – 13 anos
 	Juvenil B		14 – 17 anos
 
-21. Imprimir na tela os números de 1 a 10.
-
-	Imprimir na tela os números de 10 a 1.
-
-22. Dado um determinado número escreva a tabuada do mesmo até o 10
-
-23. Recebe 2 números do usuário e exiba todos os números existentes entre eles.
-
-24. Faça um programa que some os 10 primeiros números naturais.
-
 25. Faça um programa que apresente na tela a tabela de conversão de Graus Celsius para Fahrenheit, de -80ºC até 80ºC. Use um incremento de 10ºC.
 
 	Use constantes para delimitar os limites #define
@@ -122,10 +114,6 @@ C = distância (km) / litros (L)
 	Se número está entre 50 e 100, imprimir seu DOBRO
 	Se número é maior ou igual a 100, imprimir sua METADE
 
-29. Faça um programa que solicita as notas de duas provas feitas por cada um dos alunos de uma turma de 20 alunos e mostre para cada um a média das notas e diga se está aprovado, reprovado ou em exame, segundo o critério:
-	Média >= 7 		Aprovado
-	Média >= 4 e < 7	Exame
-	Média < 4 		Reprovado
 
 30. Calcule o imposto de renda do(s) contribuinte(s), solicitando a seu salário e o número de dependentes, através dos seguintes critérios:
 	Para cada dependente será concedido um desconto de R$ 150,00

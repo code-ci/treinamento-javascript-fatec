@@ -11,7 +11,6 @@
 
     <title>Curso de JavaScript</title>
 
-    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -21,34 +20,40 @@
             <form class="form-horizontal" role="form">
                 <h2>Input Form</h2>
                 <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label">Primeiro Input</label>
+                    <label for="primeiroInput" class="col-sm-3 control-label">Primeiro Input</label>
                     <div class="col-sm-9">
-                        <input type="text" id="txtNome" placeholder="Input 01" class="form-control" autofocus>
+                        <input type="text" id="primeiroInput" placeholder="Input 01" class="form-control" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label">Segundo Input</label>
+                    <label for="segundoInput" class="col-sm-3 control-label">Segundo Input</label>
                     <div class="col-sm-9">
-                        <input type="text" id="txtNome" placeholder="Input 02" class="form-control" autofocus>
+                        <input type="text" id="segundoInput" placeholder="Input 02" class="form-control" autofocus>
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
                     <div class="col-sm-9 col-sm-offset-3">
-                        <input type="button" class="btn btn-primary btn-block"  onclick="registrar(); return false;" value="Processar" />
+                        <input type="button" class="btn btn-primary btn-block"  onclick="funcao(); return false;" value="Processar" />
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label">Saida 1</label>
+                    <label for="primeiraSaida" class="col-sm-3 control-label">Saida 1</label>
                     <div class="col-sm-9">
-                        <input type="text" id="txtNome" class="form-control" autofocus>
+                        <input type="text" id="primeiraSaida" class="form-control" autofocus>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="firstName" class="col-sm-3 control-label">Saida 2</label>
+                    <label for="segundaSaida" class="col-sm-3 control-label">Saida 2</label>
                     <div class="col-sm-9">
-                        <textarea class="form-control" rows="10" id="saida"></textarea>
+                        <input type="text" id="segundaSaida" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="terceiraSaida" class="col-sm-3 control-label">Saida 3</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="10" id="terceiraSaida"></textarea>
                     </div>
                 </div>
             </form> 
@@ -58,25 +63,13 @@
     <script type="text/javascript">
         
 
-        function registrar() {
-
-            var numeros = "";
-
-            for(i = 0; i < 10; i++) {
-                numeros += i + "<br>";
-            }
-
-            document.getElementById("saida").textContent = numeros;
-
+        function funcao() {
+            document.getElementById('primeiraSaida').value = "Hello World!";        
         }
+
     </script>
 
-  
-    <!-- jQuery -->
     <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 </body>
 </html>

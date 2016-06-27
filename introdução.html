@@ -358,50 +358,83 @@ console.log(soma(2, 2));
 					<h2>Exercícios!</h2>
 				</section>
 
-				<section>
-					<p>Criar uma variável, atribuir a ela a mensagem "Hello world!", exibir no console;</p>
+				<section style="text-align: left;">
+					<p>- Hello world!</p>
+					<p>- Calcular a média aritmética entre 2 valores.</p>
+					<p>- Calcular o tempo de vida em meses e dias de uma pessoa através da sua idade (em anos).</p>
+					<p>- Calcular a área de um quadrado. (Área: L x L)</p>
+				</section>	
 
-					<pre><code class="hljs fragment fade-up" data-trim>
-var mensagem = "";
-
-mensagem = "Hello wordl!";
-
-console.log(mensagem);
-					</code></pre>
+				<section style="text-align: left;">
+					<p>- Imprimir na tela os números de 1 a 10.</p>
+					<p>- Imprimir na tela os números de 10 a 1.</p>
+					<p>- Dado um determinado número escreva a tabuada do mesmo até o 10.</p>
+					<p>- Recebe 2 números do usuário e exiba todos os números existentes entre eles.</p>
 				</section>
 
-				<section>
-					<p>Calcular a média aritmética de dois valores</p>
+				<section style="text-align: left;">
+					<p>- Converter de Graus Fahrenheit (f) para 
+						Graus Celsius (c): 
+						c= (F-32)*5/9</p>
 
-					<pre><code class="hljs fragment fade-up" data-trim>
-var a = 2;
-var b = 2;
+					<p>- Calcular o consumo médio de combustível
+						 de um veículo. 
+						C = distância (km) / litros (L)</p>
 
-var resultado = (a + b)/2;
-console.log(resultado);
+					<p>- Calcular a idade de uma pessoa através do seu ano de nascimento em relação ao ano atual.</p>
 
-					</code></pre>
+					<p>- Construa um programa que receba o peso de uma pessoa em quilos e mostre esse peso em gramas.</p>
+				</section style="text-align: left;">	
+
+				<section style="text-align: left;">
+
+					<p>- Realize a leitura de 2 numeros e realize as seguintes tarefas:<br>
+					<span style="color: #ff2c2d">1.</span> Identificar qual deles é maior<br>
+					
+					<span style="color: #ff2c2d">2.</span> Calcular a soma, e se a mesma for maior ou igual a 10, exibir para o usuário. Caso contrário informar ao usuário que o valor é inferior a 10.<br>
+
+					<span style="color: #ff2c2d">3.</span> Calcular a diferença entre o maior número e o menor número (res = maior – menor)</p>
 				</section>
 
-				<section>
-					<p>Utilizando if/else, exiba o status da media de um aluno, onde: </p>
-					<p>nota <= 4 é Reprovado</p>
-					<p>nota < 7 e > 4 é Exame</p>
-					<p>nota > 7 é Aprovado</p>
+				<section style="text-align: left;">
+					<p>- Receba duas notas de um aluno e exiba a media e se está Aprovado, Reprovado ou Exame:<br>
+					Média >= 7 			Aprovado<br>
+					Média >= 4 e < 7	Exame<br>
+					Média < 4 			Reprovado</p>
+				</section>
 
-					<pre><code class="hljs fragment fade-up" data-trim>
-var nota = 6.9
+				<section style="text-align: left;">
+					<p>- Calcular o IMC (Índice de Massa Corporal)<br>
+						IMC = Peso (kg) / Altura2 (m)<br>
+						IMC < 18,5		Abaixo do peso<br>
+						18,5 <= IMC < 25,0	Peso Ideal<br>
+						25,0 <= IMC < 30,0	Sobrepeso<br>
+						30,0 <= IMC < 35,0	Obesidade Grau I<br>
+						35,0 <= IMC < 40,0	Obesidade Grau II<br>
+						IMC >= 40,0		Obesidade Grau III</p>
+				</section>
 
-if (nota <= 4) {
-	console.log("Reprovado");
-} else if (nota < 7) {
-	console.log("Exame");
-} else {
-	console.log("Aprovado");
+				<section style="text-align: left;">
+
+					<section>
+						<p>- Calcule o fatorial de um determinado numero.</p>
+					</section>
+					<section>
+						<pre><code class="hljs" data-trim>
+function factorialize (num) {
+  var cnt = 1;
+  for (i = 1; i <= num ; i++) 
+  {
+    cnt *= i;
+  }
+   return cnt;
 }
-					</code></pre>
+						</code></pre>
+					</section>
 				</section>
-				
+
+
+
 			</div>
 		</div>
 
