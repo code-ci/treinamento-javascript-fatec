@@ -1,0 +1,134 @@
+1. Exibir uma mensagem qualquer na tela a sua escolha, por exemplo: “Ola Mundo!”
+2. Calcular a média aritmética entre 2 valores
+3. Calcular o tempo de vida em meses e dias de uma pessoa através da sua idade (em anos).
+
+Exemplo:
+Idade: 10 anos
+	Tempo de vida em meses: 120 meses
+	Tempo de vida em dias: 3650 dias
+
+4. Calcular a área e o perímetro de um quadrado /  retângulo.
+	Perímetro (L + L + L + L)
+	Área: L x L
+ 
+5. Converter de Graus Fahrenheit (f) para 
+Graus Celsius (c): 
+c= (F-32)*5/9
+
+6. Calcular o consumo médio de combustível
+ de um veículo. 
+C = distância (km) / litros (L)
+
+7. Calcular a idade de uma pessoa através do seu ano de nascimento em relação ao ano atual.
+
+8. Construa um programa que receba o peso de uma pessoa em quilos e mostre esse peso em gramas
+
+9. Construa um programa que calcule e exiba a área de um losango
+	A = (diag_maior * diag_menor) / 2
+
+10. Realize a leitura de 2 numeros e realize as seguintes tarefas:
+	1. Identificar qual deles é maior
+	
+	2. Calcular a soma, e se a mesma for maior ou igual a 10, exibir para o usuário. Caso contrário informar ao usuário que o valor é inferior a 10.
+
+	3. Calcular a diferença entre o maior número e o menor número (res = maior – menor)
+
+
+11. Incrementar o programa de média exibindo se o aluno foi aprovado ou reprovado seguindo os critérios abaixo:
+	Média >= 5	Aprovado
+	Média < 5	Reprovado
+
+12. Incrementar o programa de conversão de temperaturas. O usuário deverá selecionar qual o tipo de conversão ele deseja realizar.
+	c= (5.0  * (f-32))/9
+	f = 9.0 / 5.0 * c + 32
+
+13. Refazer o programa para calculo da média, levando em consideração os seguintes critérios:
+	Média >= 7		Aprovado
+	4 <= Média < 7	Exame
+	Média < 4		Reprovado
+
+14. Resolver a equação do 2º. Grau ax2+bx+c=0
+	Verificar e calcular as raízes x1 e x2
+
+		Delta = b2 – 4 * a * c
+		x1 = (-b + Raiz(Delta)) / (2 * a)
+		x2 = (-b - Raiz(Delta)) / (2 * a)
+
+	raiz=sqrt(delta);
+
+15. Calcular o IMC (Índice de Massa Corporal)
+
+	IMC = Peso (kg) / Altura2 (m)
+		IMC < 18,5		Abaixo do peso
+		18,5 <= IMC < 25,0	Peso Ideal
+		25,0 <= IMC < 30,0	Sobrepeso
+		30,0 <= IMC < 35,0	Obesidade Grau I
+		35,0 <= IMC < 40,0	Obesidade Grau II
+		IMC >= 40,0		Obesidade Grau III
+
+16. Reescreva o programa de conversão de temperaturas utilizando switch.
+
+17. Desenvolver um programa que simule uma 
+	calculadora com 4 operações (+, -, *, /). 
+	Deve ser informado os valores e qual a 
+	operação será realizada.
+
+18. Através do consumo em KWH, verifique a faixa em que o mesmo se encaixa e calcule o valor gasto.
+
+	Consumo			Valor por Kwh – R$
+	Até 300				R$ 1,25
+	De 301 até 500			R$ 1,50
+	De 501 até 600			R$ 1,75
+	De 601 até 800			R$ 2,00
+	Acima de 800			R$ 2,50
+
+19. Cálculo do peso ideal. Através do sexo e da altura, calcule o peso ideal do mesmo. Recebe o peso atual e indique se o mesmo está no peso ideal, acima ou abaixo.
+
+	Homem: (72,70 * altura) – 62,00
+	Mulher: (62,10 * altura) – 48,70
+
+20. Faça um programa em Linguagem C que receba a idade de um nadador e imprima a sua categoria seguindo as regras:
+
+	Categoria		Idade
+	Infantil A		5 – 7 anos
+	Infantil B		8 – 10 anos
+	Juvenil A		11 – 13 anos
+	Juvenil B		14 – 17 anos
+
+21. Imprimir na tela os números de 1 a 10.
+
+	Imprimir na tela os números de 10 a 1.
+
+22. Dado um determinado número escreva a tabuada do mesmo até o 10
+
+23. Recebe 2 números do usuário e exiba todos os números existentes entre eles.
+
+24. Faça um programa que some os 10 primeiros números naturais.
+
+25. Faça um programa que apresente na tela a tabela de conversão de Graus Celsius para Fahrenheit, de -80ºC até 80ºC. Use um incremento de 10ºC.
+
+	Use constantes para delimitar os limites #define
+		Exemplo: #define LIMITE_INF -80
+		f = 9.0/5.0 * c + 32
+
+26. Calcule o fatorial de um número determinado pelo usuário utilizando for.
+	Exemplo: 3! = 3*2*1 = 6
+
+27. Recebe 2 números e no seu intervalo indique se o mesmo é par ou impar
+
+28. Ler 10 números inteiros (um de cada vez) e verificar:
+
+	Se número é menor que 50, imprimir seu TRIPLO.
+	Se número está entre 50 e 100, imprimir seu DOBRO
+	Se número é maior ou igual a 100, imprimir sua METADE
+
+29. Faça um programa que solicita as notas de duas provas feitas por cada um dos alunos de uma turma de 20 alunos e mostre para cada um a média das notas e diga se está aprovado, reprovado ou em exame, segundo o critério:
+	Média >= 7 		Aprovado
+	Média >= 4 e < 7	Exame
+	Média < 4 		Reprovado
+
+30. Calcule o imposto de renda do(s) contribuinte(s), solicitando a seu salário e o número de dependentes, através dos seguintes critérios:
+	Para cada dependente será concedido um desconto de R$ 150,00
+	Salário < R$ 10.000,00				5%
+	Salário >= R$ 10.000,00 e < R$ 50.000,00	10%
+	Salário >= R$ 50.000,00				25%
