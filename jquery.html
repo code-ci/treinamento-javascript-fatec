@@ -413,8 +413,11 @@ $("seletor").show(speed,callback);
           <a href="#" class="fragment fade-in">
 							<img src="bartEats.gif" height="303" width="540">
 					</a>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").fadeIn(speed,callback);
+          </code></pre>
           <p>
-            O método fadeIn() faz com que um elemento invisível gradualmente reapareça.
+            O método fadeIn() faz com que um elemento invisível gradualmente apareça.
           </p>
         </section>
         <section>
@@ -423,6 +426,9 @@ $("seletor").show(speed,callback);
           <a href="#" class="fragment fade-out">
 							<img src="bartTowel.gif" height="299" width="398">
 					</a>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").fadeOut(speed,callback);
+          </code></pre>
           <p>
             O método fadeOut() faz com que um elemento visível gradualmente desapareça.
           </p>
@@ -431,11 +437,39 @@ $("seletor").show(speed,callback);
         <section>
           <h2>Método fadeToggle()</h2>
           <br>
-          <a href="#" class="fragment fade-out">
-							<img src="bartTowel.gif" height="299" width="398">
+          <a href="#">
+							<img src="fade.gif" height="299" width="398">
 					</a>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").fadeToggle(speed,callback);
+          </code></pre>
           <p>
             O método fadeToggle() alterna entre os métodos fadeIn() e fadeOut(), de acordo com o estado atual do elemento.
+          </p>
+        </section>
+
+        <section>
+          <h2>Método fadeTo()</h2>
+          <br>
+          <a href="#">
+							<img id="img1" src="homerGym.gif" height="300" width="310">
+					</a>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").fadeTo(speed,opacity,callback);
+          </code></pre>
+          <p>
+            O método fadeTo() altera gradualmente a opacidade do elemento para o valor informado (valores de 0 a 1).
+          </p>
+        </section>
+
+        <section>
+          <h2>Sliding</h2>
+          <br>
+          <a href="#">
+							<img id="img1" src="maggieSlide.gif" height="290" width="350">
+					</a>
+          <p>
+            jQuery permite que façamos elementos deslizarem pela página.
           </p>
         </section>
       </div>
