@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Curso de JavaScript</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+            <form class="form-horizontal" role="form">
+                <h2>Input Form</h2>
+                <div class="form-group">
+                    <label for="primeiroInput" class="col-sm-3 control-label">Primeiro Input</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="primeiroInput" placeholder="Input 01" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="segundoInput" class="col-sm-3 control-label">Segundo Input</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="segundoInput" placeholder="Input 02" class="form-control" autofocus>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <input type="button" class="btn btn-primary btn-block"  onclick="funcao(); return false;" value="Processar" />
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="primeiraSaida" class="col-sm-3 control-label">Saida 1</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="primeiraSaida" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="segundaSaida" class="col-sm-3 control-label">Saida 2</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="segundaSaida" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="terceiraSaida" class="col-sm-3 control-label">Saida 3</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="10" id="terceiraSaida"></textarea>
+                    </div>
+                </div>
+            </form> 
+        </div> 
+
+
+    <script type="text/javascript">
+        
+
+        function funcao() {
+            document.getElementById('primeiraSaida').value = "Hello World!";        
+        }
+
+    </script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

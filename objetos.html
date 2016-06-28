@@ -28,23 +28,15 @@
 
           <section>
             Introdução
-            <section>
-              <p>Objetos em programação são abstrações de objetos da vida real</p>
-            </section>
-            <section>
-              <p>Possui estado e comportamento</p>
-            </section>
-            <section>
-              <p>Tem como vantagem a simplicidade, reutilização e organização do código</p>
-            </section>
-            <section>
-              <p>Não existe classe em javascript mas podemos simular com funções e prototype</p>
-            </section>
-            <section>
-              <p>Em JavaScript, quase tudo é um objeto. Todos os tipos primitivos - com exceção de null e undefined - são tratados como objetos</p>
-            </section>
-            <section>
-              <p>Objetos são coleções de chaves e valores</p>
+            <section style="margin-top:50px;">
+              <ul>
+                <li><p class="fragment fade-in">Objetos em programação são abstrações de objetos da vida real</p></li>
+                <li><p class="fragment fade-in">Possui estado e comportamento</p></li>
+                <li><p class="fragment fade-in">Tem como vantagem a simplicidade, reutilização e organização do código</p></li>
+                <li><p class="fragment fade-in">Não existe classe em javascript mas podemos simular com funções e prototype</p></li>
+                <li><p class="fragment fade-in">Em JavaScript, quase tudo é um objeto. Todos os tipos primitivos - com exceção de null e undefined - são tratados como objetos</p></li>
+                <li><p class="fragment fade-in">Objetos são coleções de chaves e valores</p></li>
+              <ul>
             </section>
           </section>
 
@@ -52,38 +44,31 @@
             Criação
             <section>
               <p style="margin-top:50px;">Notação literal</p>
-              <pre>
-                <code>
+              <pre><code>
                   var objPessoa = {
                     nome: "João",
                     idade: 20
                   }
-                </code>
-              </pre>
-              <pre>
-                <code>
+              </code></pre>
+              <pre><code>
                   var objCarro = {
                     marca: "Ford",
                     modelo: "Focus",
                     ano: 2016
                   }
-                </code>
-              </pre>
+              </code></pre>
             </section>
             <section>
               <p style="margin-top:50px;">Função Construtora</p>
-              <pre>
-                <code>
+              <pre><code>
                   function Pessoa(nome, idade) {
                     this.nome = nome;
                     this.idade = idade;
                   }
 
                   var pessoa = new Pessoa("João", 20);
-                </code>
-              </pre>
-              <pre>
-                <code>
+              </code></pre>
+              <pre><code>
                   function Carro(marca, modelo, ano) {
                     this.marca = marca;
                     this.modelo = modelo;
@@ -91,13 +76,11 @@
                   }
 
                   var meuCarro = new Carro("Ford", "Focus", 2016);
-                </code>
-              </pre>
+              </code></pre>
             </section>
             <section>
               <p style="margin-top:50px;">Função Construtora sem Parametros</p>
-              <pre>
-                <code>
+              <pre><code>
                   function Pessoa() {
                   }
 
@@ -105,16 +88,13 @@
                   // OU
                   // PODEMOS NESSE CASO OMITIR OS PARENTESES
                   var pessoaX = new Pessoa;
-                </code>
-              </pre>
+              </code></pre>
             </section>
             <section>
               <p style="margin-top:50px;">Construtor Object</p>
-              <pre>
-                <code>
+              <pre><code>
                   var pessoa = new Object();
-                </code>
-              </pre>
+              </code></pre>
             </section>
           </section>
 
@@ -122,20 +102,16 @@
             JSON
             <section>
               <p style="margin-top:50px;">JavaScript Object Notation</p>
-              <pre>
-                <code>
+              <pre><code>
                   var text = '{"nome":"João", "idade":20}'
 
                   var objPessoa = JSON.parse(text);
-                </code>
-              </pre>
-              <pre>
-                <code>
+              </code></pre>
+              <pre><code>
                   var text = '{"nome":"João", "idade":20}'
 
                   var objPessoa = eval("(" + text + ")");
-                </code>
-              </pre>
+              </code></pre>
             </section>
           </section>
 
@@ -143,26 +119,21 @@
               Métodos
               <section>
                 <p style="margin-top:50px;">Primitivos</p>
-                <pre>
-                  <code>
+                <pre><code>
                     var text = "CleanCode";
 
                     text.substring(5);
-                  </code>
-                </pre>
-                <pre>
-                  <code>
+                </code></pre>
+                <pre><code>
                     var text = "Clean";
 
                     text.concat("Code");
-                  </code>
-                </pre>
+                </code></pre>
               </section>
 
               <section>
                 <p>Seus Métodos</p>
-                <pre>
-                  <code>
+                <pre><code>
                     var objPessoa = {};
 
                     objPessoa.andar = function() {
@@ -170,13 +141,11 @@
                     };
 
                     objPessoa.andar();
-                  </code>
-                </pre>
+                </code></pre>
               </section>
               <section>
                 <p style="margin-top:50px;">DRY (Don't repeat yourself)</p>
-                <pre>
-                  <code>
+                <pre><code>
                     function Pessoa(nome, idade) {
                       this.nome = nome;
                       this.idade = idade;
@@ -192,14 +161,12 @@
 
                     var jose = new Pessoa("José", 25);
                     jose.print();
-                  </code>
-                </pre>
+                </code></pre>
               </section>
 
               <section>
                 <p style="margin-top:50px;">Ou ainda...</p>
-                <pre>
-                  <code>
+                <pre><code>
                     function print() {
                       console.log("Nome: " + this.nome);
                       console.log("Idade: " + this.idade);
@@ -214,8 +181,7 @@
 
                     var joao = new Pessoa("João", 20);
                     joao.print();
-                  </code>
-                </pre>
+                </code></pre>
               </section>
           </section>
 
@@ -223,31 +189,29 @@
             Associação
             <section>
               <p style="margin-top:50px;">Composição</p>
-              <pre>
-                <code>
-                  function Roda(aro, tala) {
-                    this.aro = aro;
-                    this.tala = tala;
+              <pre><code>
+                function NotaFiscalItem(desc, preco, qtde, acao) {
+                  this.desc = desc;
+                  this.preco = preco;
+                  this.qtde = qtde;
 
-                    this.rodar = function() {
-                      console.log("Rodando...");
-                    };
-                  }
+                  this.usar = function() {
+                    console.log(acao);
+                  };
+                }
 
-                  var carro = {
-                    marca: "ford",
-                    roda: new Roda(17, 7)
-                  }
+                var notaFiscal = {
+                  ordem: 1,
+                  item: new NotaFiscalItem("Café", 2.5, 30, "Tomando café...")
+                }
 
-                  console.log(carro.roda.aro);
-                  carro.roda.rodar();
-                </code>
-              </pre>
+                console.log(notaFiscal.item.desc);
+                notaFiscal.item.usar();
+              </code></pre>
             </section>
             <section>
               <p style="margin-top:50px;">Agregação</p>
-              <pre>
-                <code>
+              <pre><code>
                   function Pessoa(nome, idade) {
                     this.nome = nome;
                     this.idade = idade;
@@ -264,16 +228,14 @@
 
                   console.log(funcionario.informacaoPessoal.nome);
                   funcionario.informacaoPessoal.trabalhar();
-                </code>
-              </pre>
+              </code></pre>
             </section>
           </section>
 
           <section>
             Delete (The Last Samurai!!!)
             <section>
-              <pre>
-                <code>
+              <pre><code>
                   function Pessoa(nome, idade) {
                     this.nome = nome;
                     this.idade = idade;
@@ -293,10 +255,194 @@
 
                   delete funcionario.informacaoPessoal;
                   console.log(funcionario);
-                </code>
+              </code></pre>
             </section>
           </section>
 
+          <section>
+            Array
+            <section>
+              <p style="margin-top:50px;">Criando</p>
+              <pre><code>
+                var arr = [];
+                console.log(arr);
+
+                var arr = ["Eu", "vc", "nos"];
+                console.log(arr);
+
+                var arr = new Array();
+                console.log(arr);
+
+                var text = "1,2,3,4,5";
+                var arr = text.split(",");
+                console.log(arr);
+              </code></pre>
+            </section>
+
+            <section>
+              <p style="margin-top:50px;">Push e Pop</p>
+              <pre><code>
+                var arr = ["Café","Feijão"];
+                console.log(arr);
+
+                arr.push("Fralda");
+                console.log(arr);
+              </code></pre>
+
+              <pre><code>
+                var arr = ["Café","Feijão"];
+                console.log(arr);
+
+                arr.pop();
+                console.log(arr);
+              </code></pre>
+            </section>
+            <section>
+              <p style="margin-top:50px;">Unshift e Shift</p>
+              <pre><code>
+                var arr = ["Café","Feijão"];
+                console.log(arr);
+
+                arr.unshift("Fralda");
+                console.log(arr);
+              </code></pre>
+
+              <pre><code>
+                var arr = ["Café","Feijão"];
+                console.log(arr);
+
+                arr.shift();
+                console.log(arr);
+              </code></pre>
+            </section>
+            <section>
+              <p style="margin-top:50px;">IndexOf e Splice</p>
+              <pre><code>
+                var arr = ["Café","Feijão", "Fralda"];
+                console.log(arr);
+
+                console.log(arr.indexOf("Fralda"));
+                arr.indexOf("Leite")
+              </code></pre>
+
+              <pre><code>
+                var arr = ["Café","Feijão", "Fralda"];
+                console.log(arr);
+
+                arr.splice(arr.indexOf("Feijão"), 1)
+                console.log(arr);
+              </code></pre>
+            </section>
+            <section>
+              <p style="margin-top:50px;">Sort e Reverse</p>
+              <pre><code>
+                var arr = ["Fralda", "Café", "Feijão"];
+                console.log(arr);
+
+                arr.sort();
+              </code></pre>
+
+              <pre><code>
+                var arr = ["Café","Feijão", "Fralda"];
+                console.log(arr);
+
+                arr.reverse();
+              </code></pre>
+            </section>
+          </section>
+
+          <section>
+            Eventos
+            <section style="margin-top:50px;">
+              <ul>
+                <li><p class="fragment fade-in">Os eventos são basicamente um conjunto de ações que são realizadas em um determinado elemento da página web</p></li>
+                <li><p class="fragment fade-in">Existe uma infinidade de eventos definidos para uso em JavaScript</p></li>
+                <li><p class="fragment fade-in">Existem diversas maneiras de se aplicar esses eventos aos elementos HTML. Inline, em um arquivo externo, usando um manipulador de eventos</p></li>
+              </ul>
+            </section>
+
+            <section style="margin-top:50px;">
+              <p style="margin-top:50px;">Event Listener</p>
+
+            </section>
+          </section>
+
+          <section>
+            Git
+            <section>
+              <p style="margin-top:50px;">Criando um novo repositório</p>
+              <pre><code>
+                git init
+              </code></pre>
+              <p style="margin-top:50px;">Clonando repositório já existente</p>
+              <pre><code>
+                git clone https://user@bitbucket.org/dono/projeto.git
+
+                git clone https://github.com/dono/projeto.git
+
+                git clone git@bitbucket.org:dono/projeto.git
+
+                git clone git@github.com:dono/projeto.git
+              </code></pre>
+            </section>
+
+            <section>
+              <p style="margin-top:50px;">Criando e selecionando branch</p>
+              <pre><code>
+                git status
+                # On branch master
+              </code></pre>
+              <pre><code>
+                git branch nomeBranch
+              </code></pre>
+              <pre><code>
+                git checkout nomeBranch
+                # Switched to branch 'nomeBranch'
+              </code></pre>
+              <pre><code>
+                git checkout -b nomeBranch
+                # Switched to a new branch 'nomeBranch'
+              </code></pre>
+            </section>
+
+            <section>
+              <p style="margin-top:50px;">Staging, Commit e Remoto</p>
+              <pre><code>
+                git status
+                # modified: index.html
+              </code></pre>
+              <pre><code>
+                git add .
+
+                git add *
+
+                git add --all
+              </code></pre>
+              <pre><code>
+                git commit -m "Comentário"
+              </code></pre>
+              <pre><code>
+                git push origin nomeBranch
+              </code></pre>
+            </section>
+
+            <section>
+              <p style="margin-top:50px;">Pull e Merge</p>
+              <pre><code>
+                git status
+                # On branch master
+              </code></pre>
+              <pre><code>
+                git pull origin master
+              </code></pre>
+              <pre><code>
+                git checkout nomeBranch
+              </code></pre>
+              <pre><code>
+                git merge master
+              </code></pre>
+            </section>
+          </section>
         </section>
       </div>
   </div>
