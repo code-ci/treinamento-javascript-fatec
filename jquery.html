@@ -248,10 +248,12 @@
             A maior parte dos eventos do DOM possuem um equivalente em jQuery.
           </p>
         </section>
-        <section>
+        <section no-escape>
           <h2>Eventos</h2>
           <p>
-            Para atribuir um evento a todos os parágrafos em uma página.
+            Síntaxe do evento click().
+            <br/>
+            O trecho abaixo dispara todos os eventos clicks dos elementos do tipo &lt;p&gt;.
           </p>
           <pre>
             <code class="hljs" data-trim>
@@ -277,13 +279,11 @@
             Evento executado no momento em que a página termina de carregar.
           </p>
           <p>
-            <pre>
-              <code class="hljs" data-trim>
+            <pre><code class="js" data-trim>
                 $(document).ready(function(){
      // Métodos jQuery...
 });
-              </code>
-            </pre>
+              </code></pre>
           </p>
           <p>
             BOA PRÁTICA!!
@@ -294,7 +294,182 @@
           <br>
           <p>
             Colocar o JavaScript dentro do evento ready,
-            previne que o código seja executado antes da página estar pronta, o que poderia gerar erros.
+            previne que o código seja executado antes da página estar pronta.
+          </p>
+        </section>
+        <section>
+          <h2>Alguns eventos comumente usados</h2>
+          <br>
+          <table class="">
+            <tbody>
+                <tr>
+                  <th style="width:23%">Mouse Events</th>
+                  <th style="width:25%">Keyboard Events</th>
+                  <th style="width:22%">Form Events</th>
+                  <th>Document/Window Events</th>
+                </tr>
+                <tr>
+                  <td>click</td>
+                  <td>keypress</td>
+                  <td>submit</td>
+                  <td>load</td>
+                </tr>
+                <tr>
+                  <td>dblclick</td>
+                  <td>keydown</td>
+                  <td>change</td>
+                  <td>resize</td>
+                </tr>
+                <tr>
+                  <td>mouseenter</td>
+                  <td>keyup</td>
+                  <td>focus</td>
+                  <td>scroll</td>
+                </tr>
+                <tr>
+                  <td>mouseleave</td>
+                  <td>&nbsp;</td>
+                  <td>blur</td>
+                  <td>unload</td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+
+        <section>
+          <h2>Método on()</h2>
+          <br>
+          <p>
+            Atribui um ou mais eventos aos elementos selecionados.
+          </p>
+          <pre><code>$("p").on("click", function(){
+    $(this).hide();
+});</code>
+            <code>$("p").on({
+    mouseenter: function(){
+        $(this).css("background-color", "lightgray");
+    },
+    mouseleave: function(){
+        $(this).css("background-color", "lightblue");
+    },
+    click: function(){
+        $(this).css("background-color", "yellow");
+    }
+});</code></pre>
+        </section>
+        <section>
+          <h2>Efeitos</h2>
+          <br>
+          <a href="#">
+							<img src="hide.gif" height="259" width="630">
+					</a>
+          <p>
+            jQuery fornece várias técnicas e ferramentas para adicionar animações em uma página.
+            Estas incluem efeitos simples que são usados frequentemente e permitem que criemos eventos customizados.
+          </p>
+        </section>
+
+        <section>
+          <h2>Métodos hide() e show()</h2>
+          <br>
+          <p>
+            Com jQuery, podemos ocultar e exibir elementos com os métodos hide() e show().
+          </p>
+          <pre><code class="js" data-trim>
+            $("seletor").hide(speed,callback);
+$("seletor").show(speed,callback);
+          </code></pre>
+          <ul>
+            <li>Speed: Parâmetro opcional que especifica a velocidade em que o elemento é exibido ou escondido. Pode ter os valores: "fast", "slow" e milisegundos.</li>
+            <li>Callback: Parâmetro opcional que especifica uma função para ser executada após a execução da animação.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Método toggle().</h2>
+          <br>
+          <p>
+            O método toggle() alterna entre os métodos hide() e show() automaticamente.
+          </p>
+          Sintaxe
+          <pre><code class="js" data-trim>
+            $("seletor").toggle(speed,callback);
+          </code></pre>
+          Exemplo
+          <pre><code class="js" data-trim>$("button").click(function(){
+    $("p").toggle();
+});</code></pre>
+        </section>
+        <section>
+          <h2>Fading</h2>
+          <br>
+          <a href="#">
+							<img src="fade.gif" height="368" width="480">
+					</a>
+        </section>
+        <section>
+          <h2>Método fadeIn()</h2>
+          <br>
+          <a href="#" class="fragment fade-in">
+							<img src="bartEats.gif" height="303" width="540">
+					</a>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").fadeIn(speed,callback);
+          </code></pre>
+          <p>
+            O método fadeIn() faz com que um elemento invisível gradualmente apareça.
+          </p>
+        </section>
+        <section>
+          <h2>Método fadeOut()</h2>
+          <br>
+          <a href="#" class="fragment fade-out">
+							<img src="bartTowel.gif" height="299" width="398">
+					</a>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").fadeOut(speed,callback);
+          </code></pre>
+          <p>
+            O método fadeOut() faz com que um elemento visível gradualmente desapareça.
+          </p>
+        </section>
+
+        <section>
+          <h2>Método fadeToggle()</h2>
+          <br>
+          <a href="#">
+							<img src="fade.gif" height="299" width="398">
+					</a>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").fadeToggle(speed,callback);
+          </code></pre>
+          <p>
+            O método fadeToggle() alterna entre os métodos fadeIn() e fadeOut(), de acordo com o estado atual do elemento.
+          </p>
+        </section>
+
+        <section>
+          <h2>Método fadeTo()</h2>
+          <br>
+          <a href="#">
+							<img id="img1" src="homerGym.gif" height="300" width="310">
+					</a>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").fadeTo(speed,opacity,callback);
+          </code></pre>
+          <p>
+            O método fadeTo() altera gradualmente a opacidade do elemento para o valor informado (valores de 0 a 1).
+          </p>
+        </section>
+
+        <section>
+          <h2>Sliding</h2>
+          <br>
+          <a href="#">
+							<img id="img1" src="maggieSlide.gif" height="290" width="350">
+					</a>
+          <p>
+            jQuery permite que façamos elementos deslizarem pela página.
           </p>
         </section>
       </div>
