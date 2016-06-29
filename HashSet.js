@@ -2,9 +2,7 @@ var arr = ["Cafe", "Leite", "Arroz", "Cafe"]
 var setObj = {};
 
 for (var x in arr) {
-  if (!setObj.hasOwnProperty(arr[x])) {
-    setObj[arr[x]] = true;
-  }
+  setObj[arr[x]] = true;
 }
 
 arr = [];
