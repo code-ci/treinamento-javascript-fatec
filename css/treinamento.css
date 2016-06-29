@@ -18,3 +18,7 @@
 .fontColorYellow {
   color: #FFFF00;
 }
+
+.width500 {
+  width: 600px;
+}

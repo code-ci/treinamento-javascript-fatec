@@ -2,6 +2,7 @@ $(document).ready(function() {
   animarDivCaixa();
   animarDivBola();
   animarDiv01();
+  animarDiv02();
 });
 
 function animarDivCaixa() {
@@ -22,5 +23,14 @@ function animarDiv01() {
   $("#div01").animate({left: '880px'},2000);
   $("#div01").animate({left: '0px'},2000, function() {
     animarDiv01();
+  });
+}
+
+function animarDiv02() {
+  $("#div02").click(function(){
+    var div02 = $("#div02");
+    if (div02.height() < 200 && div02.width() < 200 ) {
+      div02.animate({height: '+=30px',width: '+=30px'}, 800);
+    }
   });
 }

@@ -580,12 +580,38 @@ function animarDiv01() {
           <span class="fontColorRed">Exemplos:</span>
           <br>
           <ul>
-            <li>padding-left -> paddingLeft</li>
-            <li>margin-right -> marginRight</li>
-            <li>border-radius -> borderRadius</li>
+            <li>padding-left: paddingLeft</li>
+            <li>margin-right: marginRight</li>
+            <li>border-radius: borderRadius</li>
           </ul>
         </section>
 
+        <section>
+          <h2>Método animate() - Exemplos</h2>
+          <br>
+          <p>
+            Usando valores relativos:
+          </p>
+          <div class="width500" style="position: absolute; float: left;">
+            <pre><code class="js">
+$("#div02").click(function(){
+  var div02 = $("#div02");
+  if (div02.height() < 200
+     && div02.width() < 200 ) {
+    div02.animate({height: '+=50px',
+                  width: '+=50px'},800);
+  }
+});
+            </code></pre>
+          </div>
+          <div class="width500" style="padding-left: 650px; text-align: center;">
+            <div id="div02" style="background:#98bf21;
+                        height:80px;
+                        width:80px;
+                        position:absolute;">
+            </div>
+          </div>
+        </section>
       </div>
     </div>
 
