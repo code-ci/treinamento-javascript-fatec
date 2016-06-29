@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/treinamento.css">
 
     <!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -96,11 +97,9 @@
             jQuery é um único arquivo JavaScript, e você deve referência-lo com a tag
             <span class="fragment highlight-red">script</span>.
           </p>
-          <pre>
-            <code class="hljs" data-trim>
+          <pre><code class="html" data-trim>
                 <script src="jquery-1.12.2.min.js"></script>
-            </code>
-          </pre>
+          </code></pre>
         </section>
 
         <section>
@@ -117,19 +116,15 @@
 
         <section>
           <h2>(Content Delivery Network) CDN</h2>
-          <pre>
-            <h3>Google</h3>
-            <code class="hljs" data-trim>
+          <pre><h3>Google</h3>
+            <code class="html" data-trim>
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-            </code>
-          </pre>
+            </code></pre>
 
-          <pre>
-            <h3>Microsoft</h3>
-            <code class="hljs" data-trim>
+          <pre><h3>Microsoft</h3>
+            <code class="html" data-trim>
               <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script>
-            </code>
-          </pre>
+            </code></pre>
         </section>
 
         <section>
@@ -141,11 +136,9 @@
           <p>
             A sintaxe básica é:
           </p>
-          <pre>
-            <code class="hljs" data-trim>
+          <pre><code class="js" data-trim>
               $(selector).action()
-            </code>
-          </pre>
+            </code></pre>
           <ul>
             <li class="fragment fade-in">$ -> Define o jQuery</li>
             <li class="fragment fade-in">selector -> Um seletor para encontrar elementos HTML</li>
@@ -156,20 +149,18 @@
         <section>
           <h2>Exemplos</h2>
           <br>
-          <pre>
-            <code class="hljs" data-trim>
+          <pre><code class="js" data-trim>
               $(this).hide() // Esconde o elemento atual
               </code>
-              <code class="hljs" data-trim>
+              <code class="js" data-trim>
               $("p").hide() // Esconde todos os elementos p
             </code>
-            <code class="hljs" data-trim>
+            <code class="js" data-trim>
               $(".azul").hide() // Esconde todos os elementos com a classe "azul"
             </code>
-            <code class="hljs" data-trim>
+            <code class="js" data-trim>
               $("#idAzul").hide() // Esconde o elemento que possui o id "idAzul"
-            </code>
-          </pre>
+            </code></pre>
         </section>
 
         <section>
@@ -188,11 +179,9 @@
           <p>
             Seleciona todos os elementos da página de acordo com o nome do elemento.
           </p>
-          <pre>
-            <code class="hljs" data-trim>
+          <pre><code class="js" data-trim>
               $("p")
-            </code>
-          </pre>
+            </code></pre>
         </section>
 
         <section>
@@ -201,11 +190,9 @@
           <p>
             Utiliza o atributo id de uma tag HTML para encontrar um elemento específico.
           </p>
-          <pre>
-            <code class="hljs" data-trim>
+          <pre><code class="js" data-trim>
               $("#id")
-            </code>
-          </pre>
+            </code></pre>
           <p>
             Um id deve ser único em um documento HTML, então deve-se usar o seletor de #id,
             quando se quer encontrar um único elemento.
@@ -218,11 +205,9 @@
           <p>
             Utiliza o atributo class para encontrar todos os elementos da classe especificada.
           </p>
-          <pre>
-            <code class="hljs" data-trim>
+          <pre><code class="js" data-trim>
               $(".class")
-            </code>
-          </pre>
+            </code></pre>
         </section>
 
         <section>
@@ -238,7 +223,7 @@
           <ul>
             <li>Mover o mouse sobre um elemento.</li>
             <li>Selecionar um checkbox.</li>
-            <li>Clixar em um elemento.</li>
+            <li>Clicar em um elemento.</li>
           </ul>
         </section>
 
@@ -255,22 +240,18 @@
             <br/>
             O trecho abaixo dispara todos os eventos clicks dos elementos do tipo &lt;p&gt;.
           </p>
-          <pre>
-            <code class="hljs" data-trim>
+          <pre><code class="hljs" data-trim>
               $("p").click();
-            </code>
-          </pre>
+            </code></pre>
           <p>
             Em seguida, definimos o que deve acontecer quando o evento for disparado.
             Precisamos passar uma function para o evento.
           </p>
-          <pre>
-            <code class="hljs" data-trim>
+          <pre><code class="hljs" data-trim>
               $("p").click(function() {
   // ação do evento.
 });
-            </code>
-          </pre>
+            </code></pre>
         </section>
         <section>
           <h2>Evento Document Ready</h2>
@@ -452,7 +433,7 @@ $("seletor").show(speed,callback);
           <h2>Método fadeTo()</h2>
           <br>
           <a href="#">
-							<img id="img1" src="homerGym.gif" height="300" width="310">
+							<img src="homerGym.gif" height="300" width="310">
 					</a>
           <pre class="fragment fade-in"><code class="js" data-trim>
             $("seletor").fadeTo(speed,opacity,callback);
@@ -466,7 +447,7 @@ $("seletor").show(speed,callback);
           <h2>Sliding</h2>
           <br>
           <a href="#">
-							<img id="img1" src="maggieSlide.gif" height="290" width="350">
+							<img src="maggieSlide.gif" height="290" width="350">
 					</a>
           <p>
             jQuery permite que façamos elementos deslizarem pela página.
@@ -477,7 +458,7 @@ $("seletor").show(speed,callback);
           <h2>Método slideDown()</h2>
           <br>
           <a href="#">
-							<img id="img1" src="slideDown.gif" height="310" width="430">
+							<img src="slideDown.gif" height="310" width="430">
 					</a>
           <pre class="fragment fade-in"><code class="js" data-trim>
             $("seletor").slideDown(speed,callback);
@@ -491,7 +472,7 @@ $("seletor").show(speed,callback);
           <h2>Método slideUp()</h2>
           <br>
           <a href="#">
-							<img id="img1" src="" height="310" width="430">
+							<img src="" height="310" width="430">
 					</a>
           <pre class="fragment fade-in"><code class="js" data-trim>
             $("seletor").slideUp(speed,callback);
@@ -505,7 +486,7 @@ $("seletor").show(speed,callback);
           <h2>Método slideToggle()</h2>
           <br>
           <a href="#">
-              <img id="img1" src="slideToggle.gif" height="278" width="350">
+              <img src="slideToggle.gif" height="278" width="350">
           </a>
           <pre class="fragment fade-in"><code class="js" data-trim>
             $("seletor").slideToggle(speed,callback);
@@ -515,11 +496,103 @@ $("seletor").show(speed,callback);
           </p>
         </section>
 
+        <section>
+          <h1>Animation</h1>
+          <br>
+          <!--<a href="#">
+							<img src="" height="290" width="350">
+					</a>-->
+          <div id="divCaixa" class="boxTreina tColorGrey"></div>
+          <p>
+            jQuery fornece ferramentas para que criemos animações customizadas.
+          </p>
+        </section>
+
+        <section>
+          <h2>Método animate()</h2>
+          <br>
+          <!--<a href="#">
+							<img src="" height="290" width="350">
+					</a>-->
+          <div id="divBola" class="boxTreina tColorGrey"></div>
+          <pre class="fragment fade-in"><code class="js" data-trim>
+            $("seletor").animate({params},speed,callback);
+          </code></pre>
+          <p>
+            O método animate pode ser usado para criar animações customizadas.
+          </p>
+          <ul>
+            <li>O parâmetro <span class="fontColorRed">{params}</span> é obrigatório e define as propriedades CSS do elemento a serem animadas.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Método animate() - Exemplos</h2>
+
+          <p>
+            O exemplo abaixo, faz com que a div mova-se a direita,
+            até que sua propriedade <span class="fontColorRed">left</span>
+            atinja o valor de <span class="fontColorYellow">868px</span> e então retorne a <span class="fontColorYellow">0px</span>.
+          </p>
+          <pre><code class="hljs" data-trim>
+&lt;div style="background:#98bf21;
+            height:80px;
+            width:80px;
+            position:absolute;"
+        id="div01"&gt;
+&lt;/div&gt;
+
+function animarDiv01() {
+  $("#div01").animate({left: '868px'},2000);
+  $("#div01").animate({left: '0px'},2000, function() {
+    animarDiv01();
+  });
+}
+          </code></pre>
+          <div id="div01" style="background:#98bf21;
+                      height:80px;
+                      width:80px;
+                      position:absolute;">
+          </div>
+        </section>
+
+        <section>
+          <h2>IMPORTANTE!!!</h2>
+          <br>
+          <p>
+            Por padrão, o atributo <span class="fontColorRed">position</span> de todos os elementos HTML, possuem o valor <span class="fontColorYellow">static</span>.
+            <br>
+            <br>
+            Para manipular a posição de um elemento, precisamos primeiramente alterar o valor do atributo <span class="fontColorRed">position</span> para <span class="fontColorYellow">relative</span>, <span class="fontColorYellow">fixed</span> ou <span class="fontColorYellow">absolute</span>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Método animate() - Exemplos</h2>
+          <p>
+            Quase todos os atributos CSS podem ser manipulados através do método animate().
+            <br>
+            <br>
+            Algo importante para lembrar, é que todos os nomes de atributos devem seguir o padrão camel-case quando usados com o animate().
+            <br>
+            <br>
+          </p>
+          <span class="fontColorRed">Exemplos:</span>
+          <br>
+          <ul>
+            <li>padding-left -> paddingLeft</li>
+            <li>margin-right -> marginRight</li>
+            <li>border-radius -> borderRadius</li>
+          </ul>
+        </section>
+
       </div>
     </div>
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/treinamento.js"></script>
 
     <script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -536,6 +609,5 @@ $("seletor").show(speed,callback);
 				]
 			});
 		</script>
-
   </body>
 </html>

@@ -1,0 +1,20 @@
+.boxTreina {
+  height: 250px;
+  width: 250px;
+}
+
+.tColorBlue {
+  background-color: #0000FF;
+}
+
+.tColorGrey {
+  background-color: #666;
+}
+
+.fontColorRed {
+  color: #FF0000;
+}
+
+.fontColorYellow {
+  color: #FFFF00;
+}
