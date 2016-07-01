@@ -2,7 +2,7 @@
 
 ### Feedback Form
 
-[Formulário](http://goo.gl/forms/lrNKVJKYflkfHjIL2)
+[Preencha nosso formulário de feedback](http://goo.gl/forms/lrNKVJKYflkfHjIL2)
 
 ### Instrutores
 
