@@ -23,7 +23,7 @@ instrutores.push({
 instrutores.push({
     nome: "Rafael Nunes",
     github: "https://github.com/RafaelRNunes",
-    site: "http://rafaelnunes.me";
+    site: "http://rafaelnunes.me"
 });
 
 instrutores.push({
