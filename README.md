@@ -78,6 +78,14 @@ alunos.push({
 });
 
 alunos.push({
+    nome: "Felipe Luiz Soares"
+});
+
+alunos.push({
+    nome: "Felipe Siqueira Pinheiro"
+});
+
+alunos.push({
     nome: "Fernanda Pereira dos Santos Souza"
 });
 
