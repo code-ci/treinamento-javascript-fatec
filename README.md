@@ -131,7 +131,7 @@ alunos.push({
 });
 
 alunos.push({
-    nome: "Guilherme Pereira de Siyza dek Rio Bertola"
+    nome: "Guilherme Pereira de Souza Del Rio Bertola"
 });
 
 alunos.push({
