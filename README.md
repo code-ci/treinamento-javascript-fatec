@@ -4,8 +4,9 @@
 
 [Preencha nosso formulário de feedback](http://goo.gl/forms/lrNKVJKYflkfHjIL2)
 
-
 ### Links interessantes
+
+[Awesome List JavaScript](https://github.com/sorrycc/awesome-javascript)
 
 [Codecademy](https://www.codecademy.com)
 
@@ -15,6 +16,8 @@
 
 [HackerRank](http://hackerrank.com)
 
+[jQuery](https://jquery.com)
+
 [Khan Academy](https://pt.khanacademy.org/)
 
 [Udacity](https://br.udacity.com/)
@@ -22,6 +25,10 @@
 [URIOnlineJudge](https://www.urionlinejudge.com.br)
 
 [W3Schools](w3schools.com)
+
+### Vídeos
+
+[Rodrigo Branas](https://www.youtube.com/user/rodrigobranas)
 
 ### Instrutores
 
@@ -173,3 +180,6 @@ alunos.push({
     nome: "William Aparecido de Campos"
 });
 ```
+
+
+### Obrigado pessoal!
