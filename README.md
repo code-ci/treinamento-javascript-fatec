@@ -4,6 +4,25 @@
 
 [Preencha nosso formulário de feedback](http://goo.gl/forms/lrNKVJKYflkfHjIL2)
 
+
+### Links interessantes
+
+[Codecademy](https://www.codecademy.com)
+
+[CodeSchool](https://www.codeschool.com/)
+
+[FreeCodeCamp](freecodecamp.com)
+
+[HackerRank](http://hackerrank.com)
+
+[Khan Academy](https://pt.khanacademy.org/)
+
+[Udacity](https://br.udacity.com/)
+
+[URIOnlineJudge](https://www.urionlinejudge.com.br)
+
+[W3Schools](w3schools.com)
+
 ### Instrutores
 
 ```javascript
