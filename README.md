@@ -1,5 +1,7 @@
 # Treinamento de JavaScript - Fatec Sorocaba
 
+!(https://raw.githubusercontent.com/code-ci/treinamento-javascript-fatec/master/img/foto.jpg)
+
 ### Feedback Form
 
 [Preencha nosso formulário de feedback](http://goo.gl/forms/lrNKVJKYflkfHjIL2)
