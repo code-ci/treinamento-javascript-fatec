@@ -9,13 +9,14 @@
 ```javascript
 var instrutores = [];
 instrutores.push({
-    nome: "Celso Gay Wo",
+    nome: "Celso Wo",
     email: "celsowo@gmail.com",
     github: "https://github.com/celso-wo",
 });
 
 instrutores.push({
     nome: "Diego Francklin",
+    email: "dfrancklin23@gmail.com ",
     github: "https://github.com/dfrancklin"
 });
 
