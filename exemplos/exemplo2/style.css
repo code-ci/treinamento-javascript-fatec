@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+#table-cadastros, #form-cadastro {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#form-cadastro {
+    margin-bottom: 50px;
+}
+
+#form-cadastro input {
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding: 5px 7px;
+}
+
+#form-cadastro button {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #5772d2;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#form-cadastro button:hover {
+    background-color: #3c5095;
+}
+
+#table-cadastros {
+    background-color: #fff;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+#table-cadastros thead tr {
+    background-color: #ddd;
+}
+
+#table-cadastros tbody tr:nth-child(2n) {
+    background-color: #eee;
+}
+
+#table-cadastros th, #table-cadastros td {
+    border: 1px solid #000;
+}
+
+

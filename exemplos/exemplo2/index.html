@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo 2</title>
+        
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <form id="form-cadastro">
+            <label for="nome">Nome:</label> <br>
+            <input type="text" name="nome" id="nome"> <br>
+            
+            <label for="data-nasc">Data Nasc.:</label> <br>
+            <input type="text" name="dataNasc" id="data-nasc"> <br>
+            
+            <label for="idade">Idade:</label> <br>
+            <input type="text" name="idade" id="idade"> <br>
+            
+            <button type="submit">Salvar</button>
+        </form>
+        
+        <table id="table-cadastros">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data Nasc.:</th>
+                    <th>Idade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            
+            <tbody></tbody>
+        </table>
+        
+        <script src="jquery-3.0.0.min.js"></script>
+        <script src="jquery.mask.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
