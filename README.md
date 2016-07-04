@@ -10,23 +10,25 @@
 
 [Awesome List JavaScript](https://github.com/sorrycc/awesome-javascript)
 
-[Codecademy](https://www.codecademy.com)
+[Codecademy](https://www.codecademy.com/)
 
 [CodeSchool](https://www.codeschool.com/)
 
-[FreeCodeCamp](freecodecamp.com)
+[FreeCodeCamp](https://freecodecamp.com/)
 
-[HackerRank](http://hackerrank.com)
+[HackerRank](http://hackerrank.com/)
 
-[jQuery](https://jquery.com)
+[jQuery](https://jquery.com/)
 
 [Khan Academy](https://pt.khanacademy.org/)
 
 [Udacity](https://br.udacity.com/)
 
-[URIOnlineJudge](https://www.urionlinejudge.com.br)
+[URIOnlineJudge](https://www.urionlinejudge.com.br/)
 
-[W3Schools](w3schools.com)
+[W3Schools](http://w3schools.com/)
+
+[The New Boston](https://thenewboston.com/)
 
 ### Vídeos
 
