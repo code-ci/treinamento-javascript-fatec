@@ -52,6 +52,7 @@ instrutores.push({
 
 instrutores.push({
     nome: "Henrique Cansela",
+    email: "henrique_tsc@hotmail.com",
     github: "https://github.com/henriquetsc"
 });
 
