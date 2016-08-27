@@ -146,7 +146,9 @@ alunos.push({
 });
 
 alunos.push({
-    nome: "João Pedro Matera"
+    nome: "João Pedro Matera",
+    email: "jpmatera@gmail.com",
+    site: "https://materajp.github.io/"
 });
 
 alunos.push({
